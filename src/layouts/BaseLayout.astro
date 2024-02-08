@@ -3,8 +3,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import "../styles/global.css";
+import PageTitle from "../components/PageTitle.astro";
 
-const {pageTitle} = Astro.props;
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,11 +18,11 @@ const {pageTitle} = Astro.props;
     </head>
     <body>
         <Header />
-        <h1>{pageTitle}</h1>
+        <PageTitle title={pageTitle} />
         <slot />
         <Footer />
         <script>
-            import "../scripts/menu.js";
+            // import "../scripts/menu.js";
         </script>
     </body>
 </html>

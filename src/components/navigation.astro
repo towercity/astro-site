@@ -2,9 +2,61 @@
 
 ---
 
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/tags/">Tags</a>
-</div>
+<style>
+    .header-links {
+        background-color: #01008c;
+    }
+
+    .header-links ul {
+        margin: 0;
+        padding: 10px 15px;
+    }
+
+    .header-links li {
+        color: white;
+        list-style-type: none;
+        font-size: 1.5em;
+        text-transform: lowercase;
+        padding: 2.5px 0;
+        text-align: right;
+    }
+
+    .header-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 524px) {
+        .header-links {
+            position: sticky;
+            top: 150px;
+            width: 100vw;
+        }
+
+        .header-links ul {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header-links li {
+            display: inline;
+            padding: 0 2vw;
+            font-size: 1em;
+        }
+    }
+
+    @media screen and (min-width: 525px) {
+    }
+</style>
+
+<nav class="header-links">
+    <ul>
+        <li><a href="/">about</a></li>
+        <li><a href="/blog/">blog</a></li>
+        <li><a href="/page/pubs">pubs</a></li>
+        <li>
+            <a href="mailto:jakobkonger@gmail.com">contact</a>
+        </li>
+        <li><a href="/feed.xml">RSS</a></li>
+    </ul>
+</nav>
