@@ -3,6 +3,6 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://konger.moe",
+  site: "https://konger.online",
   integrations: [preact()]
 });
