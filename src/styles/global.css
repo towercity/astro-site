@@ -5,9 +5,10 @@
 body {
   --color-background: #ffecff;
   --color-foreground: var(--color-foreground);
+  --header-width: 30vw;
 
   display: grid;
-  grid-template-columns: [header] 1fr [content1] 1fr [content2] 1fr;
+  grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr;
 }
 
 header {
@@ -183,7 +184,7 @@ img.biopic {
   .header-links {
     position: fixed;
     width: 150px;
-    left: calc(33.333vw - 150px - 2vh);
+    left: calc(var(--header-width) - 150px - 2vh);
     bottom: 5vh;
   }
 
