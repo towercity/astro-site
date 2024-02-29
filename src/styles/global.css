@@ -23,6 +23,7 @@ header {
   @media screen and (max-width: 524px) {
     grid-column: 1 / span 3;
     height: 150px;
+    min-height: unset;
     background: url("/img/side.jpg") center center;
   }
 }
