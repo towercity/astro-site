@@ -1,14 +1,41 @@
 * {
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+body {
+  --color-background: #ffecff;
+  --color-foreground: var(--color-foreground);
+
+  display: grid;
+  grid-template-columns: [header] 1fr [content1] 1fr [content2] 1fr;
+}
+
+header {
+  height: 100vh;
+  background: url("/img/side_large.jpg");
+  background-size: cover;
+  grid-column: header / span 1;
+
+  @media screen and (max-width: 524px) {
+    grid-column: 1 / span 3;
+    height: 150px;
+    background: url("/img/side.jpg") center center;
+  }
+}
+
+.content {
+  grid-column: content1 / span 2;
+
+  @media screen and (max-width: 524px) {
+    grid-column: 1 / span 3;
+  }
+}
+
+
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: #ffecff;
-  color: #01008c;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 body,
@@ -79,11 +106,11 @@ hr {
 
 
 #page-header {
-  color: #01008c;
+  color: var(--color-foreground);
 }
 
 .content {
-  background-color: #ffecff;
+  background-color: var(--color-background);
 }
 
 article p {
@@ -97,7 +124,7 @@ article p {
 
 .post-title {
   text-decoration: none;
-  color: #01008c;
+  color: var(--color-foreground);
   text-transform: capitalize;
 }
 
@@ -169,7 +196,7 @@ img.biopic {
     line-height: 90px;
     white-space: nowrap;
     overflow: hidden;
-    color: #01008c;
+    color: var(--color-foreground);
   }
 
   .subtitle-wrap {
@@ -178,10 +205,7 @@ img.biopic {
   }
 
   .content {
-    position: absolute;
-    left: 33.33333vw;
-    width: 64vw;
-    background-color: #ffecff;
+    background-color: var(--color-background);
   }
 
   article {
