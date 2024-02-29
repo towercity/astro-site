@@ -9,6 +9,10 @@ body {
 
   display: grid;
   grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr [free-space] 8vw;
+
+  @media screen and (max-width: 524px) {
+    grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr;
+  }
 }
 
 header {
@@ -30,6 +34,7 @@ header {
 
 .content {
   grid-column: content1 / span 2;
+  margin-bottom: 10vh;
 
   @media screen and (max-width: 524px) {
     grid-column: 1 / span 3;

@@ -7,6 +7,10 @@ const year = new Date().getFullYear();
     font-size: 0.65em;
     text-align: right;
     padding-top: 20px;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    z-index: 0;
   }
 
   footer p {
@@ -14,6 +18,6 @@ const year = new Date().getFullYear();
   }
 </style>
 
-<footer>
+<footer class="site-footer">
   <p>&copy; 2015 - {year} | j konger</p>
 </footer>

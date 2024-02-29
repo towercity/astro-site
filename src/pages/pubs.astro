@@ -1,39 +1,44 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentBlock from "../components/ContentBlock.astro";
 
 const pageTitle = "pubs";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h3 id="fiction">Fiction</h3>
-    <ul>
-        <li>
-            <a href="https://www.vampcatmag.com/post/song-father-jakob-konger"
-                >Song for a Father</a
-            >: Vamp Cat, 2019
-        </li>
-        <li>
-            <a href="https://defenestrationism.net/(shadows)/">(shadows)</a>:
-            Defenestrationism, 2019
-        </li>
-        <li>
-            <a
-                href="https://hypnopompblog.wordpress.com/2020/12/05/the-chinese-restaurant-by-jakob-konger-fiction/"
-                >The Chinese Restaurant</a
-            >: Hypnopomp, 2020
-        </li>
-        <li>A Fish Story: Long River Review, 2020</li>
-        <li>
-            <a href="https://www.quarterlywest.com/issue-102-konger"
-                >One Long Sentence</a
-            >: Quarterly West, 2021
-        </li>
-        <li>A Brief Reflection on Apartment Clotheslines: Flip Sides, 2021</li>
-        <li>
-            <a
-                href="http://ringlingshiftjournal.com/wp-content/uploads/2022/04/SHIFTissue4_web.pdf"
-                >A Bargain</a
-            >: Shift, 2022
-        </li>
-    </ul>
+    <ContentBlock title="fiction">
+        <ul>
+            <li>
+                <a
+                    href="https://www.vampcatmag.com/post/song-father-jakob-konger"
+                    >Song for a Father</a
+                >: Vamp Cat, 2019
+            </li>
+            <li>
+                <a href="https://defenestrationism.net/(shadows)/">(shadows)</a
+                >: Defenestrationism, 2019
+            </li>
+            <li>
+                <a
+                    href="https://hypnopompblog.wordpress.com/2020/12/05/the-chinese-restaurant-by-jakob-konger-fiction/"
+                    >The Chinese Restaurant</a
+                >: Hypnopomp, 2020
+            </li>
+            <li>A Fish Story: Long River Review, 2020</li>
+            <li>
+                <a href="https://www.quarterlywest.com/issue-102-konger"
+                    >One Long Sentence</a
+                >: Quarterly West, 2021
+            </li>
+            <li>
+                A Brief Reflection on Apartment Clotheslines: Flip Sides, 2021
+            </li>
+            <li>
+                <a
+                    href="http://ringlingshiftjournal.com/wp-content/uploads/2022/04/SHIFTissue4_web.pdf"
+                    >A Bargain</a
+                >: Shift, 2022
+            </li>
+        </ul>
+    </ContentBlock>
 </BaseLayout>
