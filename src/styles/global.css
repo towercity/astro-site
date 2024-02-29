@@ -16,6 +16,8 @@ header {
   min-height: 100vh;
   background: url("/img/side_large.jpg");
   background-size: cover;
+  background-attachment: fixed;
+
   grid-column: header / span 1;
 
   @media screen and (max-width: 524px) {
