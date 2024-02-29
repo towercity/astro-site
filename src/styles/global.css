@@ -4,7 +4,7 @@
 
 body {
   --color-background: #ffecff;
-  --color-foreground: var(--color-foreground);
+  --color-foreground: #01008c;
   --header-width: 30vw;
 
   display: grid;
@@ -33,6 +33,10 @@ header {
   @media screen and (max-width: 524px) {
     grid-column: 1 / span 3;
   }
+}
+
+.in-page-content {
+  display: grid;
 }
 
 
@@ -213,9 +217,7 @@ img.biopic {
   }
 
   article {
-    width: 61.666vw;
-    max-width: 700px;
-    margin-left: 1vw;
+    margin-inline: 1vw;
   }
 
   /* Media queries */

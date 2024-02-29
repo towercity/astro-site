@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+import ContentBlock from "../components/ContentBlock.astro";
+
 const pageTitle = "about";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>j konger is a from tampa, florida, a mostly fictional place</p>
+  <ContentBlock title="about">
+    <p>j konger is a from tampa, florida, a mostly fictional place</p>
+  </ContentBlock>
 </BaseLayout>
