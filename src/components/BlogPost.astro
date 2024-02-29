@@ -1,7 +1,9 @@
 ---
+import ContentBlock from "./ContentBlock.astro";
+
 const { url, title } = Astro.props;
 ---
 
-<li>
+<ContentBlock title={title}>
     <a href={url}>{title}</a>
-</li>
+</ContentBlock>
