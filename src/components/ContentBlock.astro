@@ -1,8 +1,8 @@
 ---
-const { title, link } = Astro.props;
+const { title, link, fullWidth } = Astro.props;
 ---
 
-<div class="content-block-wrapper">
+<div class=`content-block-wrapper ${fullWidth && 'full-width'}`>
     {
         title && (
             <div class="content-title-wrap">
@@ -26,11 +26,14 @@ const { title, link } = Astro.props;
         background: var(--color-background);
         filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
 
-        &:first-child:last-child {
+        &:first-child:last-child,
+        &.full-width {
             grid-column: 1 / span 2;
         }
 
-        grid-column-end: span 1;
+        @media screen and (min-width: 875px) {
+            grid-column-end: span 1;
+        }
     }
 
     .content-title-wrap {

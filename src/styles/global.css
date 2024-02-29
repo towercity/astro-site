@@ -5,10 +5,10 @@
 body {
   --color-background: #ffecff;
   --color-foreground: #01008c;
-  --header-width: 30vw;
+  --header-width: 25vw;
 
   display: grid;
-  grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr;
+  grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr [free-space] 8vw;
 }
 
 header {
