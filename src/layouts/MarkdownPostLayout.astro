@@ -1,22 +1,23 @@
 ---
+import ContentBlock from "../components/ContentBlock.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>{frontmatter.pubDate.slice(0, 10)}</p>
+    <ContentBlock title=`posted ${frontmatter.pubDate.slice(0, 10)}`>
+        <slot />
 
-    <slot />
-
-    <div class="tags">
-        {
-            frontmatter.tags.map((tag) => (
-                <p class="tag">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                </p>
-            ))
-        }
-    </div>
+        <div class="tags">
+            {
+                frontmatter.tags.map((tag) => (
+                    <p class="tag">
+                        <a href={`/tags/${tag}`}>{tag}</a>
+                    </p>
+                ))
+            }
+        </div>
+    </ContentBlock>
 </BaseLayout>
 
 <style>

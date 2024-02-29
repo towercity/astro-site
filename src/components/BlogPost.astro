@@ -4,6 +4,9 @@ import ContentBlock from "./ContentBlock.astro";
 const { url, title } = Astro.props;
 ---
 
-<ContentBlock title={title}>
-    <a href={url}>{title}</a>
+<ContentBlock title={title} link={url}>
+    <slot />
+    <p>
+        <a href={url}>(view post)</a>
+    </p>
 </ContentBlock>

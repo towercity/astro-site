@@ -1,4 +1,7 @@
 ---
+import PostExcerpt from "@igor.dvlpr/astro-post-excerpt";
+import { PropRenderer } from "@igor.dvlpr/astro-post-excerpt";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
@@ -7,11 +10,17 @@ const pageTitle = "blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<p>Illegal in 7 states</p>
-
 	{
 		allPosts.map((post) => (
-			<BlogPost url={post.url} title={post.frontmatter.title} />
+			<BlogPost url={post.url} title={post.frontmatter.title}>
+				<p>
+					<PostExcerpt
+						post={post}
+						words={50}
+						renderer={PropRenderer.Hybrid}
+					/>
+				</p>
+			</BlogPost>
 		))
 	}
 </BaseLayout>
