@@ -67,35 +67,28 @@ h2 {
   padding: 0;
   margin: 0;
   letter-spacing: 0.75px;
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
-  font-family: 'Eczar', serif;
+  font-family: serif;
   font-size: 1.2em;
 }
 
-h3 {
-  font-size: 1.75em;
-  margin: 10px 0;
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin-block: 0.5em;
 }
 
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
+li {
+  margin-block: 0.25em;
 }
 
-p {
-  font-size: 1.2em;
-}
-
-a:link {
-  color: #ffb4ff;
-}
-
-a:visited {
-  color: #8c6cac;
+li ul {
+  margin-block: 0;
 }
 
 hr {

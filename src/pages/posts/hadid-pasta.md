@@ -5,7 +5,7 @@ pubDate: 2024-02-26
 tags: ["recipe", "pasta" ]
 ---
 
-# Ingredients
+### Ingredients
 
 - 1 lb pasta shape of your choice ((I recommend orecchiette or small shells))
 - 1/2 cup olive oil
@@ -21,7 +21,7 @@ tags: ["recipe", "pasta" ]
 - 1/2 cup grated parmesan cheese, (plus more for topping)
 - Chopped basil, (for topping)
 
-# Instructions
+### Instructions
 
 - Bring a large pot of lightly salted water to a boil. Cook pasta according to package instructions. When draining, reserve about 1/2 cup of pasta water.
 - While pasta is cooking, add olive oil to a large skillet over medium heat. When hot, add shallot or onion and cook until it begins to soften, about 5 minutes. Add garlic and cook until fragrant, about one minute.
@@ -33,7 +33,7 @@ tags: ["recipe", "pasta" ]
 
 -----
 
-# Notes
+### Notes
 It was cold but we went to Wendy's to get free frosties. We got keyfobs that let us do this, from S—'s dad. This makes us part of a rare and very exclusive club: pescatarians[^1] who occasionally go to Wendy's. this is an absolute waste of time (especially when its cold out), but nothing worthwhile is _not_ a waste of time. Joy is felt best outside of existence's upkeep. This is the first lesson Gigi Hadid's pasta taught.
 
 
