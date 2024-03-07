@@ -1,0 +1,54 @@
+---
+import ContentBlock from "../ContentBlock.astro";
+
+const { fullWidth } = Astro.props;
+---
+
+<ContentBlock title="now" fullWidth={fullWidth} link="/now">
+    <div id="content">
+        <h1 id="work">Work</h1>
+        <ul>
+            <li>
+                Senior Associate Web Developer at <code
+                    >unnamed environmental non-profit</code
+                >
+            </li>
+            <li>that means i work with wordpress</li>
+        </ul>
+        <h1 id="writing-projects">Writing Projects</h1>
+        <h2 id="writing">Writing</h2>
+        <ul>
+            <li>
+                "Genre" trilogy:<ul>
+                    <li>The Girl</li>
+                    <li>The Revolution</li>
+                </ul>
+            </li>
+            <li>
+                "Litfic" trilogy:<ul>
+                    <li>The Mime</li>
+                </ul>
+            </li>
+            <li>Countless short stories and poems</li>
+        </ul>
+        <h2 id="seeking-publication">Seeking publication</h2>
+        <ul>
+            <li>
+                "Genre" trilogy:<ul>
+                    <li>Kossler!</li>
+                </ul>
+            </li>
+            <li>The Great American Desert</li>
+            <li>From Above</li>
+            <li>Countless short stories and poems</li>
+        </ul>
+        <h1 id="other-projects">Other Projects</h1>
+        <ul>
+            <li>this site</li>
+        </ul>
+        <h1 id="learning">Learning</h1>
+        <ul>
+            <li>Japanese</li>
+        </ul>
+    </div>
+</ContentBlock>
