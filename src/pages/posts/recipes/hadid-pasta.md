@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../../layouts/MarkdownPostLayout.astro
 title: 'Gigi Hadid Pasta'
 pubDate: 2024-02-26
 tags: ["recipe", "pasta" ]
