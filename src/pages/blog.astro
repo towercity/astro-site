@@ -5,6 +5,10 @@ import { PropRenderer } from "@igor.dvlpr/astro-post-excerpt";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/**/*.md");
+allPosts.sort(
+	(a, b) =>
+		Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate),
+);
 
 const pageTitle = "blog";
 ---
