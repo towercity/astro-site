@@ -17,6 +17,7 @@
     "sanitize-html": "^2.12.1"
   },
   "devDependencies": {
-    "@igor.dvlpr/astro-post-excerpt": "^2.1.0"
+    "@igor.dvlpr/astro-post-excerpt": "^2.1.0",
+    "@types/sanitize-html": "^2.11.0"
   }
 }
