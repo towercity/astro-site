@@ -7,6 +7,8 @@ body {
   --color-foreground: #01008c;
   --header-width: 25vw;
 
+  font-size: 18px;
+
   display: grid;
   grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr [free-space] 8vw;
   background: url("/img/side_large.jpg");
