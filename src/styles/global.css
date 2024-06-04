@@ -9,16 +9,18 @@ body {
 
   display: grid;
   grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr [free-space] 8vw;
+  background: url("/img/side_large.jpg");
+  background-size: cover;
 
   @media screen and (max-width: 524px) {
     grid-template-columns: [header] var(--header-width) [content1] 1fr [content2] 1fr;
+    min-height: 105%;
   }
 }
 
 header {
   height: 100%;
   min-height: 100vh;
-  background: url("/img/side_large.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -26,9 +28,9 @@ header {
 
   @media screen and (max-width: 524px) {
     grid-column: 1 / span 3;
-    height: 150px;
+    height: 0;
     min-height: unset;
-    background: url("/img/side.jpg") center center;
+    text-align: center;
   }
 }
 
@@ -55,8 +57,8 @@ header {
 
 html,
 body {
-  background-color: var(--color-background);
   color: var(--color-foreground);
+  min-height: 105%;
 }
 
 body,
@@ -121,10 +123,6 @@ hr {
 
 #page-header {
   color: var(--color-foreground);
-}
-
-.content {
-  background-color: var(--color-background);
 }
 
 article p {
@@ -216,10 +214,6 @@ img.biopic {
   .subtitle-wrap {
     position: relative;
     top: -13px;
-  }
-
-  .content {
-    background-color: var(--color-background);
   }
 
   article {

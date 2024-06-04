@@ -4,13 +4,24 @@ const year = new Date().getFullYear();
 
 <style>
   footer {
+    --gradient-stop: calc(99% - 158px);
+
     font-size: 0.65em;
     text-align: right;
-    padding-top: 20px;
+    padding-block: 3px;
+    padding-inline: 1%;
     position: fixed;
-    bottom: 1vh;
-    right: 1vw;
+    bottom: 0;
+    right: 0;
     z-index: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) var(--gradient-stop),
+      var(--color-background) 98%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    width: 100%;
   }
 
   footer p {
