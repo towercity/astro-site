@@ -21,7 +21,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "img",
       publicFolder: "public",
     },
   },
@@ -31,13 +31,46 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/pages/posts",
+        defaultItem: () => {
+          return {
+            layout: "../../layouts/MarkdownPostLayout.astro",
+            tags: ["update"],
+            pubDate: new Date().toJSON().slice(0, 10)
+          }
+        },
         fields: [
           {
+            name: "layout",
+            label: "Layout",
             type: "string",
+            required: true,
+            searchable: false,
+            options: [
+              {
+                value: "../../layouts/MarkdownPostLayout.astro",
+                label: "Default"
+              }
+            ]
+          },
+          {
             name: "title",
             label: "Title",
+            type: "string",
             isTitle: true,
+            required: true,
+          },
+          {
+            label: "Tags",
+            name: "tags",
+            type: "string",
+            list: true
+          },
+          {
+            label: "Date",
+            name: "pubDate",
+            type: "datetime",
+            dateFormat: "YYYY-MM-DD",
             required: true,
           },
           {
@@ -49,5 +82,13 @@ export default defineConfig({
         ],
       },
     ],
+  },
+  search: {
+    tina: {
+      indexerToken: process.env.TINASEARCH,
+      stopwordLanguages: ["eng"],
+    },
+    indexBatchSize: 50,
+    maxSearchIndexFieldLength: 100,
   },
 });
