@@ -32,6 +32,16 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "src/pages/posts",
+        ui: {
+          filename: {
+            readonly: false,
+            slugify: (values) => {
+              return `${values?.title
+                ?.toLowerCase()
+                .replace(/ /g, '-')}`
+            },
+          },
+        },
         defaultItem: () => {
           return {
             layout: "../../layouts/MarkdownPostLayout.astro",
