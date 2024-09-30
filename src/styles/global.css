@@ -2,11 +2,13 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
   --color-background: #ffecff;
   --color-foreground: #01008c;
   --header-width: 25vw;
+}
 
+body {
   font-size: 18px;
 
   display: grid;
