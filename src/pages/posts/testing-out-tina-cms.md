@@ -10,3 +10,6 @@ As an excuse to post more on here, I'm trying out TinaCMS. Expect either:
 
 1. More posts, as they are easier to make
 2. Less posts, as I can now \~tinker\~
+3. wayne cone flaming lips
+
+![](/img/public/img/IMG_0480.jpeg)
