@@ -13,6 +13,10 @@ concurrency: # prevent concurrent deploys doing strange things
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+      TINA_TOKEN: ${{ secrets.TINA_TOKEN }} 
+      TINASEARCH: ${{ secrets.TINASEARCH }}
 
     steps:
     - uses: actions/checkout@v3
