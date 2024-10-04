@@ -12,4 +12,4 @@ As an excuse to post more on here, I'm trying out TinaCMS. Expect either:
 2. Less posts, as I can now \~tinker\~
 3. wayne cone flaming lips
 
-<img src="https://assets.tina.io/d5083a0b-2732-43de-b7e7-9f8246373790/public/img/IMG_0480.jpeg" alt="wayne on a screen" width="100%"/>
+<img src="https://assets.tina.io/d5083a0b-2732-43de-b7e7-9f8246373790/public/img/IMG_0480.jpeg" alt="wayne on a screen"/>
