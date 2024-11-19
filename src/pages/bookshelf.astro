@@ -1,0 +1,30 @@
+---
+import PostExcerpt from "@igor.dvlpr/astro-post-excerpt";
+import { PropRenderer } from "@igor.dvlpr/astro-post-excerpt";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Book from "../components/Book.astro";
+const allPosts = await Astro.glob("../pages/books/**/*.md");
+allPosts.sort(
+	(a, b) =>
+		Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate),
+);
+
+const pageTitle = "bookshelf";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	{
+		allPosts.map((post) => (
+			<Book url={post.url} title={post.frontmatter.title} author={post.frontmatter.author}>
+				<p>
+					<PostExcerpt
+						post={post}
+						words={99999}
+						renderer={PropRenderer.Hybrid}
+					/>
+				</p>
+			</Book>
+		))
+	}
+</BaseLayout>

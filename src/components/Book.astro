@@ -1,0 +1,20 @@
+---
+import ContentBlock from "./ContentBlock.astro";
+
+const { url, title, author } = Astro.props;
+
+let pageTitle = "";
+if (title) {
+    pageTitle += title;
+}
+if (title && author) {
+    pageTitle += " by ";
+}
+if (author) {
+    pageTitle += author;
+}
+---
+
+<ContentBlock title={pageTitle} link={url}>
+    <slot />
+</ContentBlock>
