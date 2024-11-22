@@ -1,8 +1,8 @@
 ---
-const { title, link, fullWidth } = Astro.props;
+const { title, link, fullWidth, classNames } = Astro.props;
 ---
 
-<div class=`content-block-wrapper ${fullWidth && 'full-width'}`>
+<div class=`content-block-wrapper ${fullWidth && 'full-width'} ${classNames}`>
     {
         title && (
             <div class="content-title-wrap">

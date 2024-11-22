@@ -16,12 +16,15 @@ const pageTitle = "bookshelf";
 <BaseLayout pageTitle={pageTitle}>
 	{
 		allPosts.map((post) => (
-			<Book url={post.url} title={post.frontmatter.title} author={post.frontmatter.author}>
+			<Book
+				book={post}
+			>
 				<p>
 					<PostExcerpt
 						post={post}
 						words={99999}
-						renderer={PropRenderer.Hybrid}
+						renderer={PropRenderer.Html}
+						addEllipsis={false}
 					/>
 				</p>
 			</Book>
