@@ -241,3 +241,34 @@ img.biopic {
     }
   }
 }
+
+/* bookshelf styles */
+
+.book-block .content-content-wrap {
+  display: flex;
+  gap: 1em;
+}
+
+.book-block .cover {
+  width: 25%;
+  order: 2;
+}
+
+.book-block .info {
+  width: 75%;
+  order: 1;
+}
+
+.book-block .info h3 {
+  margin: 0;
+}
+
+.book-block:nth-of-type(odd) {
+  .cover {
+    order: 1;
+  }
+
+  .info {
+    order: 2;
+  }
+}

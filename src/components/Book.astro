@@ -1,5 +1,4 @@
 ---
-import { datetimeRegex } from "astro/zod";
 import ContentBlock from "./ContentBlock.astro";
 
 const book = Astro.props.book;
@@ -28,7 +27,7 @@ if (finished) {
 }
 ---
 
-<ContentBlock classNames="book-block">
+<ContentBlock classNames="book-block" fullWidth>
     <div class="cover">
         <img src={cover} alt="book cover" />
     </div>
@@ -46,33 +45,3 @@ if (finished) {
     </div>
 </ContentBlock>
 
-<style>
-    
-.block {
-    border: 1px solid #ffecff;
-    background: #01008c;
-}
-
-.book-block {
-    display: flex;
-    gap: 0.5em;
-}
-
-.book-block .cover {
-    width: 25%;
-}
-
-.book-block .info {
-    padding-block: 1em;
-    width: 75%;
-    color: white;
-}
-
-.book-block .info h3 {
-    margin: 0;
-}
-
-.book-block .info strong {
-    filter: drop-shadow(.3em .3em 0em red);
-}
-</style>
