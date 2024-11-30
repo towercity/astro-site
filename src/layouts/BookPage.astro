@@ -1,0 +1,23 @@
+---
+import Book from "../components/Book.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+console.log(Astro.props)
+
+const { frontmatter } = Astro.props;
+const book = { frontmatter }
+
+---
+
+<BaseLayout>
+			<Book
+				book={book}
+			>
+				<p>
+                <slot />
+				</p>
+			</Book>
+</BaseLayout>
+
+<style>
+</style>

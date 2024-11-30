@@ -18,6 +18,7 @@ const pageTitle = "bookshelf";
 		allPosts.map((post) => (
 			<Book
 				book={post}
+				link={post.url}
 			>
 				<p>
 					<PostExcerpt

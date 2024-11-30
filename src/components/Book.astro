@@ -1,7 +1,7 @@
 ---
 import ContentBlock from "./ContentBlock.astro";
 
-const book = Astro.props.book;
+const { book, link } = Astro.props;
 const { title, author, started, finished, cover } = book.frontmatter;
 
 let bookHeading = "";
@@ -27,7 +27,7 @@ if (finished) {
 }
 ---
 
-<ContentBlock classNames="book-block" fullWidth>
+<ContentBlock classNames="book-block" fullWidth link={link}>
     <div class="cover">
         <img src={cover} alt="book cover" />
     </div>
