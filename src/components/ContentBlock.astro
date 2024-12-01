@@ -1,8 +1,16 @@
 ---
-const { title, link, fullWidth, classNames } = Astro.props;
+import classNames from "classnames";
+
+const { title, link, fullWidth, hidePadding } = Astro.props;
 ---
 
-<div class=`content-block-wrapper ${fullWidth && 'full-width'} ${classNames}`>
+<div
+    class={classNames(
+        "content-block-wrapper",
+        { "full-width": fullWidth },
+        { "hide-padding": hidePadding },
+    )}
+>
     {
         title && (
             <div class="content-title-wrap">
@@ -55,7 +63,9 @@ const { title, link, fullWidth, classNames } = Astro.props;
     }
 
     .content-content-wrap {
-        padding: 1em;
+        &:not(> .hide-padding) {
+            padding: 1em;
+        }
 
         > *:first-child {
             margin-block-start: 0;

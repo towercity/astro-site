@@ -1,7 +1,7 @@
 ---
 import ContentBlock from "./ContentBlock.astro";
 
-const { book, link } = Astro.props;
+const { book, link, singleView } = Astro.props;
 const { title, author, started, finished, cover } = book.frontmatter;
 
 let bookHeading = "";
@@ -9,7 +9,7 @@ if (title) {
     bookHeading += title;
 }
 if (title && author) {
-    bookHeading += " by ";
+    bookHeading += ", by ";
 }
 if (author) {
     bookHeading += author;
@@ -27,21 +27,35 @@ if (finished) {
 }
 ---
 
-<ContentBlock classNames="book-block" fullWidth link={link}>
-    <div class="cover">
-        <img src={cover} alt="book cover" />
-    </div>
-    <div class="info">
-        <h3>
-            {bookHeading}
-        </h3>
-        <div class="logbook">
-            <strong>read: </strong>
-            {logBook}
-        </div>
-        <div class="comment">
-            <slot />
-        </div>
-    </div>
-</ContentBlock>
+{
+    !singleView && (
+        <ContentBlock classNames="book-block" fullWidth link={link}>
+            <div class="cover">
+                <img src={cover} alt="book cover" />
+            </div>
+            <div class="info">
+                <h3>{bookHeading}</h3>
+                <div class="logbook">
+                    <strong>read: </strong>
+                    {logBook}
+                </div>
+                <div class="comment">
+                    <slot />
+                </div>
+            </div>
+        </ContentBlock>
+    )
+}
+{
+    singleView && (
+        <ContentBlock classNames="book-single" title={bookHeading} hidePadding>
+            <img src={cover} alt="book cover" class="book-cover-single"/>
+        </ContentBlock>
+    )
+}
 
+<style>
+    .book-cover-single {
+        width: 100%;
+    }
+</style>
