@@ -49,7 +49,9 @@ if (finished) {
 {
     singleView && (
         <ContentBlock classNames="book-single" title={bookHeading} hidePadding>
-            <img src={cover} alt="book cover" class="book-cover-single"/>
+            <a href={link}>
+                <img src={cover} alt="book cover" class="book-cover-single" />
+            </a>
         </ContentBlock>
     )
 }

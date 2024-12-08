@@ -12,7 +12,7 @@ title: Eyes
 last_read: "[[2024]]"
 started: 2024-11-07
 finished: 2024-11-12
-cover: https://s26162.pcdn.co/wp-content/uploads/2015/10/william-gass-eyes-cover.png
+cover: /img/bookshelf/king-darker.png
 layout: ../../layouts/BookPage.astro
 ---
 
