@@ -1,10 +1,10 @@
 ---
 import ContentBlock from "../components/ContentBlock.astro";
-import BaseLayout from "./BaseLayout.astro";
+import BlogLayout from "./BlogLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BlogLayout pageTitle={frontmatter.title}>
     <ContentBlock title=`posted ${frontmatter.pubDate.slice(0, 10)}` fullWidth>
         <slot />
     </ContentBlock>
@@ -19,7 +19,7 @@ const { frontmatter } = Astro.props;
             }
         </div>
     </ContentBlock>
-</BaseLayout>
+</BlogLayout>
 
 <style>
     .tags {

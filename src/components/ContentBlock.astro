@@ -2,6 +2,7 @@
 const { title, link, fullWidth } = Astro.props;
 ---
 
+
 <div class=`content-block-wrapper ${fullWidth && 'full-width'}`>
     {
         title && (
@@ -22,9 +23,6 @@ const { title, link, fullWidth } = Astro.props;
 
 <style>
     .content-block-wrapper {
-        border: 1px solid var(--color-foreground);
-        background: var(--color-background);
-        filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
         z-index: 10;
 
         &:first-child:last-child,

@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Header from "../components/Header.astro";
+
+import Island from "../components/Island.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout>
+    <Header pageTitle={pageTitle} />
+    <main class="content">
+        <div class="left">
+            <div class="left-content">
+                <Island noPadding>
+                    <a href="/">
+                        <img src="/img/side.jpg" width="500px" />
+                    </a>
+                </Island>
+                <Island> mountains and websites </Island>
+            </div>
+        </div>
+        <div class="right">
+            <article class="page">
+                <h1>{pageTitle}</h1>
+                <slot />
+            </article>
+        </div>
+    </main>
+</BaseLayout>
+
+<style is:global>
+    :root {
+        color-scheme: light dark;
+
+        font-size: 18px;
+
+        --color-light: #ffecff;
+        --color-dark: #01008c;
+
+        --color-foreground: light-dark(var(--color-dark), var(--color-light));
+        --color-background: light-dark(var(--color-light), var(--color-dark));
+    }
+
+    body {
+        background-color: var(--color-background);
+        line-height: 1.25;
+    }
+
+    .with-shadow {
+        background: var(--color-background);
+        filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em;
+        position: fixed;
+        z-index: 10;
+
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        border-bottom: 1px solid var(--color-foreground);
+
+        a {
+            color: var(--color-foreground);
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: calc(80rch + 25px + 506px)) {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
+
+    .header-links {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5em;
+        }
+    }
+
+    main {
+        padding-top: 2.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: calc(80rch + 25px + 506px)) {
+            padding-inline: 1rem;
+        }
+
+        > .left {
+            padding-top: 8%;
+            min-width: 506px;
+            min-height: 706px;
+
+            @media screen and (max-width: calc(80rch + 25px + 506px)) {
+                padding-top: 15%;
+                padding-bottom: 10px;;
+                min-width: unset;
+                min-height: unset;
+            }
+
+            .left-content {
+                position: fixed;
+
+                @media screen and (max-width: calc(80rch + 25px + 506px)) {
+                    position: relative;
+                }
+            }
+        }
+
+        > .right {
+            padding-top: 33vh;
+            padding-bottom: 10%;
+            min-width: 80rch;
+            max-width: calc(80rch + 25px);
+            z-index: 5;
+            background: var(--color-background);
+
+            @media screen and (max-width: calc(80rch + 25px + 506px)) {
+                padding-top: 5%;
+                min-width: 100%;
+            }
+        }
+    }
+</style>

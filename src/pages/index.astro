@@ -1,13 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogLayout from "../layouts/BlogLayout.astro";
 
 import AboutBlock from "../components/pageSegments/AboutBlock.astro";
 import NowBlock from "../components/pageSegments/NowBlock.astro";
 
-const pageTitle = "at home on the web";
+const pageTitle = "home";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BlogLayout pageTitle={pageTitle}>
   <AboutBlock fullWidth />
   <NowBlock fullWidth/>
-</BaseLayout>
+</BlogLayout>

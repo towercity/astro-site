@@ -1,36 +1,22 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import "../styles/reset.css"
 
-import "../styles/global.css";
-import PageTitle from "../components/PageTitle.astro";
-
-const { pageTitle } = Astro.props;
+const pageTitle  = Astro.props.pageTitle;
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Header />
-        <div class="content">
-            <article class="page">
-                <PageTitle title={pageTitle} />
-                <div class="in-page-content">
-                    <slot />
-                </div>
-            </article>
-
-            <Footer />
-        </div>
-
+        <slot />
         <script>
-            // import "../scripts/menu.js";
+            // space for global scripts, ie:
+            // import "../scripts/name.js";
         </script>
     </body>
 </html>
