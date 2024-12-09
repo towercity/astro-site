@@ -1,0 +1,24 @@
+---
+const { hideShadow, noPadding } = Astro.props;
+---
+
+<div
+    class:list={[
+        "island",
+        { "with-shadow": !hideShadow },
+        { "with-padding": !noPadding },
+    ]}
+>
+    <slot />
+</div>
+
+<style>
+    .island {
+        display: flex;
+        border: 1px solid var(--color-foreground);
+
+        &.with-padding {
+            padding: 0.5rem;
+        }
+    }
+</style>

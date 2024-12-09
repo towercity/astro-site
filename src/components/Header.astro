@@ -1,9 +1,14 @@
 ---
 import Navigation from "./navigation.astro";
+
+const { pageTitle } = Astro.props;
 ---
 
-<style></style>
-
-<header>
+<header class="with-shadow">
+    <h1>
+        <span class="me!">j konger</span>
+        ・
+        <span class="page-title">{pageTitle}</span>
+    </h1>
     <Navigation />
 </header>

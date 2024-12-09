@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogLayout from "../layouts/BlogLayout.astro";
 import ContentBlock from "../components/ContentBlock.astro";
 
 const pageTitle = "pubs";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BlogLayout pageTitle={pageTitle}>
     <ContentBlock title="fiction">
         <ul>
             <li>
@@ -41,4 +41,4 @@ const pageTitle = "pubs";
             </li>
         </ul>
     </ContentBlock>
-</BaseLayout>
+</BlogLayout>
