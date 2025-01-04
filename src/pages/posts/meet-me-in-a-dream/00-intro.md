@@ -1,0 +1,144 @@
+---
+pubDate: 2025-01-04
+layout: ../../../layouts/MarkdownPostLayout.astro
+title: "Meet Me in a Dream translatoion"
+tags: [ "haruki murakami", "shigesato itoi", "meet me in a dream", "translation" ]
+---
+
+a few notes on my translations of Meet Me In a Dream:
+- this is not the most accurate translation you’ll ever find. my interest in the project is mostly literary, and my japanese might be called “studied but inept,” like a novice monk in 1500’s latin
+- i know of the other partial translation online, but i’m not consulting it, for same reasons as above
+- respecting authorial intentions, as expressed in the books foreword, i will not be marking who wrote what on this page. that’s only there with the stories themselves 
+- let me know what you think, imagined reader. contact link’s there in the menu
+
+## stories
+(with links to translation, if available)
+- ア
+	- [Eisenhower](/posts/meet-me-in-a-dream/01-eisenhower)
+	- Assistant
+	- Asparagus
+	- Apartment
+	- Work
+	- Allergies
+	- Encore
+	- Antithesis 
+- イ
+	- Interview
+	- Indian
+	- Interior
+- ウ
+	- West Coast
+- エ
+	- Etiquette 
+	- Elite
+	- Elevator 
+- オ
+	- Sardines in Oil
+	- All Night
+	- Onion Soup
+- カ
+	- Carpet
+	- Kama Sutra
+	- Cutlet
+- キ
+	- Camp Fire
+- ク
+	- Quiz Show
+	- Cool Mint Gum
+	- Crab
+	- Grape Drops
+- コ
+	- Coin
+	- Coffee
+	- Coffee Cup
+	- Coca Cola
+	- Condor
+- サ
+	- Surfer
+	- Sudden Death
+	- Salary Man
+- シ
+	- Season
+	- Off-Season
+	- Shaving Cream
+	- Shigesato Itoi
+	- City Boy
+	- Shower
+	- Jungle Book
+	- Short Stop
+	- Jinx
+- ス
+	- Squeeze
+	- Superman
+	- Star Wars
+	- Stereotype
+	- Straight
+	- Special Issue
+- セ
+	- Sweater
+	- Xerox
+- ソ
+	- Soft Serve
+	- Softball
+- タ
+	- Direct Mail
+	- Taxi
+	- Talcum Powder
+- チ
+	- Charlie Manuel
+	- Chewing Gum I
+	- Chewing Gum II
+- テ
+	- Disney Land
+	- Debt
+	- Death Match
+	- Tent
+- ト
+	- Donuts I
+	- Donuts II
+	- Dog Food
+- 二
+	- Nickname
+- ノ
+	- Knock
+- ハ
+	- Highway
+	- High Heel
+	- Haruki Murakami
+	- Bread
+	- Handsome
+- ヒ
+	- Beer
+- フ
+	- Philip Marlowe
+	- Blue Suede Shoes
+	- Blueberry Ice Cream
+	- Playboy Party Joke
+- へ
+	- Baseball
+	- Penguin
+- ホ
+	- Whale
+	- Hotel
+	- Pony Tail
+- マ
+	- Margarine
+	- Masquerade 
+	- Match
+	- May
+- ミ
+	- Disco Ball
+- モ
+	- Mozart
+	- Moral
+- ラ
+	- Rack
+	- Love Letter
+	- Last Scene
+	- Lunch
+	- Runway
+- レ
+	- Raincoat
+- ワ
+	- Wham!
+	- Bow Wow

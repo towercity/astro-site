@@ -2,10 +2,10 @@
 pubDate: 2024-12-18
 layout: ../../../layouts/MarkdownPostLayout.astro
 title: "Eisenhower, or 1958's Place in Postwar History, by Haruki Murakami"
-tags: [ "haruki murakami", "lets meet in a dream", "translation" ]
+tags: [ "haruki murakami", "meet me in a dream", "translation" ]
 ---
 
-_my translation of the first story of [夢で会いましょう [Let's Meet in Dreams] by Haruki Murakami and Shigesato Itoi](https://www.goodreads.com/en/book/show/31029521-let-s-meet-in-dreams), not garounteed to be accurate. later i'll add a small intro post/page to explain the liberties i've taken, but until then, enjoy!_
+_my translation of the first story of [夢で会いましょう [Meet Me in a Dream] by Haruki Murakami and Shigesato Itoi](https://www.goodreads.com/en/book/show/31029521-let-s-meet-in-dreams), not garounteed to be accurate. see [the intro post](/posts/meet-me-in-a-dream/00-intro) to read more!_
 
 _PS: probably worth it to use your browsers reader mode. this site is hella under construction now_
 
