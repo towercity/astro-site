@@ -14,7 +14,7 @@ const { pageTitle } = Astro.props;
         <div class="left">
             <div class="left-content">
                 <Island noPadding>
-                    <a href="/">
+                    <a href="/" style="line-height:0;">
                         <img src="/img/side.jpg" width="500px" />
                     </a>
                 </Island>
@@ -38,15 +38,26 @@ const { pageTitle } = Astro.props;
 
         --color-light: #ffecff;
         --color-dark: #01008c;
+        --color-dark--secondary: #01004d;
+        --color-light--secondary:  #ffe5ff;
 
         --color-foreground: light-dark(var(--color-dark), var(--color-light));
         --color-background: light-dark(var(--color-light), var(--color-dark));
+        --color-background--secondary: 
+            light-dark(var(--color-light--secondary), var(--color-dark--secondary))
     }
 
     body {
         color: var(--color-foreground);
-        background-color: var(--color-background);
         line-height: 1.25;
+        margin: 0;
+        background:
+            linear-gradient(135deg, var(--color-background--secondary) 25%, transparent 25%) -50px 0,
+            linear-gradient(225deg, var(--color-background--secondary) 25%, transparent 25%) -50px 0,
+            linear-gradient(315deg, var(--color-background--secondary) 25%, transparent 25%),
+            linear-gradient(45deg, var(--color-background--secondary) 25%, transparent 25%);
+        background-size: 100px 100px;
+        background-color:  var(--color-background);
     }
 
     .with-shadow {
@@ -61,8 +72,10 @@ const { pageTitle } = Astro.props;
     header {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding: 0.5em;
+        gap: 0.5rem;
         position: fixed;
         z-index: 10;
 
@@ -74,18 +87,14 @@ const { pageTitle } = Astro.props;
             color: var(--color-foreground);
             text-decoration: none;
         }
-
-        @media screen and (max-width: calc(80rch + 25px + 506px)) {
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
     }
 
     .header-links {
         ul {
             list-style: none;
             display: flex;
-            gap: 0.5em;
+            gap: 0.5rem;
+            padding: 0;
         }
     }
 
@@ -106,7 +115,7 @@ const { pageTitle } = Astro.props;
 
             @media screen and (max-width: calc(80rch + 25px + 506px)) {
                 padding-top: 15%;
-                padding-bottom: 10px;;
+                padding-bottom: 10px;
                 min-width: unset;
                 min-height: unset;
             }
@@ -121,12 +130,11 @@ const { pageTitle } = Astro.props;
         }
 
         > .right {
-            padding-top: 33vh;
+            padding-top: 25vh;
             padding-bottom: 10%;
             min-width: 80rch;
             max-width: calc(80rch + 25px);
             z-index: 5;
-            background: var(--color-background);
 
             @media screen and (max-width: calc(80rch + 25px + 506px)) {
                 padding-top: 5%;

@@ -1,24 +1,29 @@
 ---
+import Island from "./Island.astro";
+
 const { title, link, fullWidth } = Astro.props;
 ---
-
 
 <div class=`content-block-wrapper ${fullWidth && 'full-width'}`>
     {
         title && (
-            <div class="content-title-wrap">
-                {link && (
-                    <a href={link}>
-                        <h3>{title}</h3>
-                    </a>
-                )}
-                {!link && <h3>{title}</h3>}
-            </div>
+            <Island noPadding>
+                <div class="content-title-wrap">
+                    {link && (
+                        <a href={link}>
+                            <h3>{title}</h3>
+                        </a>
+                    )}
+                    {!link && <h3>{title}</h3>}
+                </div>
+            </Island>
         )
     }
-    <div class="content-content-wrap">
-        <slot />
-    </div>
+    <Island bottomMargin>
+        <div class="content-content-wrap">
+            <slot />
+        </div>
+    </Island>
 </div>
 
 <style>
@@ -36,7 +41,6 @@ const { title, link, fullWidth } = Astro.props;
     }
 
     .content-title-wrap {
-        border-bottom: 1px solid var(--color-foreground);
         padding-inline: 1em;
         padding-block: 0.75em;
 
