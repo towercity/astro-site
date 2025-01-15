@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import Header from "../components/Header.astro";
-
 import Island from "../components/Island.astro";
+
+import { Image } from "astro:assets";
+import sideImage from "../img/side.jpg";
 
 const { pageTitle } = Astro.props;
 ---
@@ -15,15 +16,19 @@ const { pageTitle } = Astro.props;
             <div class="left-content">
                 <Island noPadding>
                     <a href="/" style="line-height:0;">
-                        <img src="/img/side.jpg" width="500px" />
+                        <Image
+                            src={sideImage}
+                            width="450"
+                            alt="A beautiful building in simulated night."
+                        />
                     </a>
                 </Island>
                 <Island> mountains and websites </Island>
             </div>
         </div>
         <div class="right">
-            <article class="page">
                 <h1>{pageTitle}</h1>
+            <article class="page">
                 <slot />
             </article>
         </div>
@@ -39,12 +44,14 @@ const { pageTitle } = Astro.props;
         --color-light: #ffecff;
         --color-dark: #01008c;
         --color-dark--secondary: #01004d;
-        --color-light--secondary:  #ffe5ff;
+        --color-light--secondary: #ffe5ff;
 
         --color-foreground: light-dark(var(--color-dark), var(--color-light));
         --color-background: light-dark(var(--color-light), var(--color-dark));
-        --color-background--secondary: 
-            light-dark(var(--color-light--secondary), var(--color-dark--secondary))
+        --color-background--secondary: light-dark(
+            var(--color-light--secondary),
+            var(--color-dark--secondary)
+        );
     }
 
     body {
@@ -52,12 +59,28 @@ const { pageTitle } = Astro.props;
         line-height: 1.25;
         margin: 0;
         background:
-            linear-gradient(135deg, var(--color-background--secondary) 25%, transparent 25%) -50px 0,
-            linear-gradient(225deg, var(--color-background--secondary) 25%, transparent 25%) -50px 0,
-            linear-gradient(315deg, var(--color-background--secondary) 25%, transparent 25%),
-            linear-gradient(45deg, var(--color-background--secondary) 25%, transparent 25%);
+            linear-gradient(
+                    135deg,
+                    var(--color-background--secondary) 25%,
+                    transparent 25%
+                ) -50px 0,
+            linear-gradient(
+                    225deg,
+                    var(--color-background--secondary) 25%,
+                    transparent 25%
+                ) -50px 0,
+            linear-gradient(
+                315deg,
+                var(--color-background--secondary) 25%,
+                transparent 25%
+            ),
+            linear-gradient(
+                45deg,
+                var(--color-background--secondary) 25%,
+                transparent 25%
+            );
         background-size: 100px 100px;
-        background-color:  var(--color-background);
+        background-color: var(--color-background);
     }
 
     .with-shadow {
@@ -100,45 +123,41 @@ const { pageTitle } = Astro.props;
 
     main {
         padding-top: 2.5rem;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        @media screen and (max-width: calc(80rch + 25px + 506px)) {
-            padding-inline: 1rem;
-        }
+        padding-inline: 1rem;
+        max-width: 1300px;
+        margin-inline: auto;
+        gap: 2rem;
 
         > .left {
             padding-top: 8%;
-            min-width: 506px;
-            min-height: 706px;
-
-            @media screen and (max-width: calc(80rch + 25px + 506px)) {
-                padding-top: 15%;
-                padding-bottom: 10px;
-                min-width: unset;
-                min-height: unset;
-            }
+            max-width: 452px;
 
             .left-content {
                 position: fixed;
-
-                @media screen and (max-width: calc(80rch + 25px + 506px)) {
-                    position: relative;
-                }
             }
         }
 
         > .right {
             padding-top: 25vh;
             padding-bottom: 10%;
-            min-width: 80rch;
-            max-width: calc(80rch + 25px);
-            z-index: 5;
 
-            @media screen and (max-width: calc(80rch + 25px + 506px)) {
-                padding-top: 5%;
-                min-width: 100%;
+            z-index: 5;
+            max-width: calc(80rch + 25px);
+            margin-left: auto;
+        }
+
+        @media screen and (max-width: 1300px) {
+            > .left {
+                margin-inline: auto;
+                .left-content {
+                    position: initial;
+                }
+            }
+
+            > .right {
+                padding-top: 0;
+                margin-left: unset;
+                margin-inline: auto;
             }
         }
     }
