@@ -12,4 +12,4 @@ As an excuse to post more on here, I'm trying out TinaCMS. Expect either:
 2. Less posts, as I can now \~tinker\~
 3. wayne cone flaming lips
 
-![](../../img/public/img/IMG_0480.jpeg)
+![](../../img/public/img/IMG_0480.png)
