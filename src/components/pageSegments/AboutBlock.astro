@@ -1,9 +1,9 @@
+
 ---
 import ContentBlock from "../ContentBlock.astro";
-
-const { fullWidth } = Astro.props;
+import * as about from '../../pages/parts/about.md';
 ---
 
-<ContentBlock title="about" fullWidth={fullWidth} link="/about">
-    <p>j konger is from tampa, florida, a mostly fictional place</p>
-</ContentBlock>
+<ContentBlock title={about.frontmatter.title} link="/about">
+    <about.Content />
+ </ContentBlock>

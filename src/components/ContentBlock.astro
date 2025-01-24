@@ -1,10 +1,10 @@
 ---
 import Island from "./Island.astro";
 
-const { title, link, fullWidth } = Astro.props;
+const { title, link  } = Astro.props;
 ---
 
-<div class=`content-block-wrapper ${fullWidth && 'full-width'}`>
+<div class=`content-block-wrapper`>
     {
         title && (
             <Island noPadding>
@@ -27,19 +27,6 @@ const { title, link, fullWidth } = Astro.props;
 </div>
 
 <style>
-    .content-block-wrapper {
-        z-index: 10;
-
-        &:first-child:last-child,
-        &.full-width {
-            grid-column: 1 / span 2;
-        }
-
-        @media screen and (min-width: 875px) {
-            grid-column-end: span 1;
-        }
-    }
-
     .content-title-wrap {
         padding-inline: 1em;
         padding-block: 0.75em;

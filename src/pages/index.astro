@@ -2,12 +2,13 @@
 import BlogLayout from "../layouts/BlogLayout.astro";
 
 import AboutBlock from "../components/pageSegments/AboutBlock.astro";
-import NowBlock from "../components/pageSegments/NowBlock.astro";
+import Rules from "../components/pageSegments/Rules.astro";
+
 
 const pageTitle = "home";
 ---
 
 <BlogLayout pageTitle={pageTitle}>
   <AboutBlock fullWidth />
-  <!-- <NowBlock fullWidth/> -->
+  <Rules />
 </BlogLayout>
