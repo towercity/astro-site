@@ -3,21 +3,19 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npx tinacms dev -c 'astro dev'",
-    "start": "tinacms build && astro build",
-    "build": "tinacms build && astro build",
+    "dev": "astro dev",
+    "start": "astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/preact": "^3.1.0",
     "@astrojs/rss": "^4.0.4",
-    "@tinacms/cli": "^1.6.2",
     "astro": "^4.1.2",
     "preact": "^10.19.3",
     "sanitize-html": "^2.12.1",
-    "sharp": "^0.33.5",
-    "tinacms": "^2.2.5"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.1.6",
