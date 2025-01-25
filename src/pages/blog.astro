@@ -4,11 +4,19 @@ import { PropRenderer } from "@igor.dvlpr/astro-post-excerpt";
 
 import BlogLayout from "../layouts/BlogLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
-const allPosts = await Astro.glob("../pages/posts/**/*.md");
-allPosts.sort(
-	(a, b) =>
-		Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate),
-);
+const allPosts = await Astro.glob("../pages/posts/**/*.*");
+allPosts.sort((a, b) => {
+	if(a.frontmatter.title == 'test') {
+		console.log(a, a.frontmatter.pubDate)
+	}
+	if (a.frontmatter) {
+		return (
+			Date.parse(b.frontmatter.pubDate) -
+			Date.parse(a.frontmatter.pubDate)
+		);
+	}
+	return 0;
+});
 
 const pageTitle = "blog";
 ---
@@ -18,11 +26,18 @@ const pageTitle = "blog";
 		allPosts.map((post) => (
 			<BlogPost url={post.url} title={post.frontmatter.title}>
 				<p>
-					<PostExcerpt
+					{post.Content && 
+					 <PostExcerpt
 						post={post}
 						words={40}
 						renderer={PropRenderer.Hybrid}
-					/>
+					/> }
+					{! post.Content &&
+						<span>
+							this is a special post! click thru
+							to see more!
+						</span>
+					}
 				</p>
 			</BlogPost>
 		))
