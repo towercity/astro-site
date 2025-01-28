@@ -7,7 +7,7 @@ export async function GET(context) {
 
     return rss({
         title: 'j konger | blog',
-        description: 'a nice site',
+        description: 'a nice website',
         site: context.site,
         items: posts.map((post) => {
             const item = {
