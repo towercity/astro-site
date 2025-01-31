@@ -37,7 +37,7 @@
 	:not([class]) {
 	  h1&, h2&, h3&, h4&, h5&, h6& {
 		margin-block: 0.75em;
-		line-height: 1.25;
+		line-height: 1.5;
 		text-wrap: balance;
 		letter-spacing: -0.05ch;
 		font-family: sans-serif;
@@ -45,6 +45,7 @@
   
 	  p&, ol&, ul& {
 		margin-block: 1em;
+		text-align: justify;
 	  }
   
 	  ol&, ul& {
@@ -55,6 +56,11 @@
 	  li& {
 		margin-block: 0.5em;
 	  }
+	}
+
+	pre[class] {
+		padding: 1em;
+		border-radius: 0.5em;
 	}
 }
 
