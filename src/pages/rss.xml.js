@@ -2,7 +2,7 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 
 export async function GET(context) {
-    const postImportResult = import.meta.glob('../pages/posts/**/*.*', { eager: true });
+    const postImportResult = import.meta.glob('../pages/posts/**/*.(astro|md*)', { eager: true });
     const posts = Object.values(postImportResult);
 
     return rss({
