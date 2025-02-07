@@ -1,13 +1,14 @@
 ---
-const { hideShadow, noPadding, bottomMargin } = Astro.props;
+const { hideShadow, noPadding, bottomMargin, class: className } = Astro.props;
 ---
 
 <div
     class:list={[
+        className,
         "island",
         { "with-shadow": !hideShadow },
         { "with-padding": !noPadding },
-        { "bottom-margin": bottomMargin}
+        { "bottom-margin": bottomMargin },
     ]}
 >
     <slot />

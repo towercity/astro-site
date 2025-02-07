@@ -3,9 +3,29 @@ import BlogLayout from "../layouts/BlogLayout.astro";
 
 import AboutBlock from "../components/pageSegments/AboutBlock.astro";
 
+import Island from "../components/Island.astro";
+
+import { Image } from "astro:assets";
+import me from "../img/me.png";
+
 const pageTitle = "about";
 ---
 
 <BlogLayout pageTitle={pageTitle} }>
     <AboutBlock fullWidth />
+    <Island class="me-label">
+        <span>↓</span> 
+        <span>lucky hidden poloroid of the author (me) </span>
+        <span>↓</span>
+    </Island>
+    <Island>
+        <Image src={me}
+        alt="poloroid of me" />
+    </Island>
 </BlogLayout>
+
+<style is:global>
+    .me-label {
+        justify-content: space-between;
+    }
+</style>
