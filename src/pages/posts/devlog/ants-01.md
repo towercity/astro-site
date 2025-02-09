@@ -23,7 +23,7 @@ first we must create a world for them to live in. pico8 offers three default fun
 
 `_draw()` in fact is all we need to create our world. software after all is not concerned with reality, only representation, thank god. thus, we need only add the color of dirt to our draw function, as dirt is the insects' natural home. pico-8 uses a [integer index-based color palatte](https://pico-8.fandom.com/wiki/Palette#The_system_palette), so let's draw with that now:
 ```lua
-function draw()
+function _draw()
     cls(4)
 end
 ```
