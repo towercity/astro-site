@@ -1,0 +1,23 @@
+---
+import ContentBlock from "../components/ContentBlock.astro";
+import BlogLayout from "./BlogLayout.astro";
+const { frontmatter: {
+      title, tagline
+} } = Astro.props;
+---
+
+<BlogLayout pageTitle={title}>
+    <ContentBlock title={tagline}>
+        <slot />
+    </ContentBlock>
+</BlogLayout>
+
+<style>
+    .tags {
+        display: flex;
+    }
+
+    .tag {
+        margin: 0.25em;
+    }
+</style>
