@@ -45,11 +45,31 @@ const pubs = [
         'year': '2022',
         'link': 'http://ringlingshiftjournal.com/wp-content/uploads/2022/04/SHIFTissue4_web.pdf',
     },
+    {
+        'title': 'The Hands',
+        'journal': 'The Fabulist',
+        'year': '2022',
+        'link': 'https://fabulistmagazine.com/product/the-hands-by-jakob-konger/',
+    },
+    {
+        'title': 'A Short Treatise on Apartment Clotheslines',
+        'journal': 'lol i forgot where, i didn\'t keep good records, swear this was somewhere',
+        'year': 'c. 2023-2024',
+    },
 ]
 ---
 
 <BlogLayout pageTitle={pageTitle}>
     <ContentBlock title="fiction">
+        <small>
+            <p>
+                Note: this doesn't include early fiction/"juvenalia" from before i 
+                thought it prudent to take records. there's also a stretch of time,
+                2023-2024ish, where i dramatically and quitely decided to 'give up' 
+                in which i stopped keeping records, but i think i got the my only
+                publication from then listed at least partially there
+            </p>
+        </small>
         <ul>
             {
                 pubs.map(pub => {
@@ -61,5 +81,10 @@ const pubs = [
                 })
             }
         </ul>
+        <p><small>
+            ps, if you want a copy of any of these, send me a line, i'll send 
+            you a copy, we wont tell, except wrt The Hands, as that one's actually
+            for sale, i will not be stealing from myself
+        </small></p>
     </ContentBlock>
 </BlogLayout>
