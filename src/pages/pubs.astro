@@ -3,42 +3,63 @@ import BlogLayout from "../layouts/BlogLayout.astro";
 import ContentBlock from "../components/ContentBlock.astro";
 
 const pageTitle = "pubs";
+
+const pubs = [
+    {
+        'title': 'Song for a Father',
+        'journal': 'Vamp Cat',
+        'year': '2019',
+        'link': 'https://www.vampcatmag.com/post/song-father-jakob-konger',
+    },
+    {
+        'title': '(shadows)',
+        'journal': 'Defenestration',
+        'year': '2019',
+        'link': 'https://defenestrationism.net/(shadows)/',
+    },
+    {
+        'title': 'The Chinese Restaurant',
+        'journal': 'Hynopomp',
+        'year': '2020',
+        'link': 'https://hypnopompblog.wordpress.com/2020/12/05/the-chinese-restaurant-by-jakob-konger-fiction/',
+    },
+    {
+        'title': 'A Fish Story',
+        'journal': 'Long River Review',
+        'year': '2020',
+    },
+    {
+        'title': 'One Long Sentence',
+        'journal': 'Quarterly West',
+        'year': '2021',
+        'link': 'https://www.quarterlywest.com/issue-102-konger',
+    },
+    {
+        'title': 'A Brief Reflection on Apartment Clotheslines',
+        'journal': 'Flip Sides',
+        'year': '2021',
+    },
+    {
+        'title': 'A Bargain',
+        'journal': 'Shift',
+        'year': '2022',
+        'link': 'http://ringlingshiftjournal.com/wp-content/uploads/2022/04/SHIFTissue4_web.pdf',
+    },
+]
 ---
 
 <BlogLayout pageTitle={pageTitle}>
     <ContentBlock title="fiction">
         <ul>
-            <li>
-                <a
-                    href="https://www.vampcatmag.com/post/song-father-jakob-konger"
-                    >Song for a Father</a
-                >: Vamp Cat, 2019
-            </li>
-            <li>
-                <a href="https://defenestrationism.net/(shadows)/">(shadows)</a
-                >: Defenestrationism, 2019
-            </li>
-            <li>
-                <a
-                    href="https://hypnopompblog.wordpress.com/2020/12/05/the-chinese-restaurant-by-jakob-konger-fiction/"
-                    >The Chinese Restaurant</a
-                >: Hypnopomp, 2020
-            </li>
-            <li>A Fish Story: Long River Review, 2020</li>
-            <li>
-                <a href="https://www.quarterlywest.com/issue-102-konger"
-                    >One Long Sentence</a
-                >: Quarterly West, 2021
-            </li>
-            <li>
-                A Brief Reflection on Apartment Clotheslines: Flip Sides, 2021
-            </li>
-            <li>
-                <a
-                    href="http://ringlingshiftjournal.com/wp-content/uploads/2022/04/SHIFTissue4_web.pdf"
-                    >A Bargain</a
-                >: Shift, 2022
-            </li>
+            {
+                pubs.map(pub => {
+                    return <li>
+                        {pub.link && <a href={pub.link}>{pub.title}</a> }
+                        {! pub.link && <span>{pub.title}</span> }
+                        ({pub.journal}, {pub.year})
+                    </li>
+                })
+            }
         </ul>
     </ContentBlock>
 </BlogLayout>
