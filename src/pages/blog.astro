@@ -22,20 +22,7 @@ const pageTitle = "blog";
 	{
 		allPosts.map((post) => (
 			<BlogPost url={post.url} title={post.frontmatter.title}>
-				<p>
-					{post.Content && 
-					 <PostExcerpt
-						post={post}
-						words={40}
-						renderer={PropRenderer.Hybrid}
-					/> }
-					{! post.Content &&
-						<span>
-							this is a special post! click thru
-							to see more!
-						</span>
-					}
-				</p>
+				
 			</BlogPost>
 		))
 	}
