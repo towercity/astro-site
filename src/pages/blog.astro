@@ -1,19 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
+
 import PostExcerpt from "@igor.dvlpr/astro-post-excerpt";
 import { PropRenderer } from "@igor.dvlpr/astro-post-excerpt";
 
 import BlogLayout from "../layouts/BlogLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
-const allPosts = await Astro.glob("../pages/posts/**/*.(md*|astro)");
+
+const allPosts = await getCollection('blog')
 allPosts.sort((a, b) => {
-	if (a.frontmatter) {
 		return (
-			Date.parse(b.frontmatter.pubDate) -
-			Date.parse(a.frontmatter.pubDate)
-		);
-	}
-	return 0;
+			Date.parse(b.data.pubDate) -
+			Date.parse(a.data.pubDate));
 });
+
+console.log(allPosts)
 
 const pageTitle = "blog";
 ---
@@ -21,8 +22,7 @@ const pageTitle = "blog";
 <BlogLayout pageTitle={pageTitle}>
 	{
 		allPosts.map((post) => (
-			<BlogPost url={post.url} title={post.frontmatter.title}>
-				
+			<BlogPost url={`/posts/${post.id}`} title={post.data.title}>
 			</BlogPost>
 		))
 	}
