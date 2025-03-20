@@ -1,9 +1,10 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+
 import sanitizeHtml from 'sanitize-html';
 
 export async function GET(context) {
-    const postImportResult = import.meta.glob('../pages/posts/**/*.(astro|md*)', { eager: true });
-    const posts = Object.values(postImportResult);
+    const posts = await getCollection('blog');
 
     return rss({
         title: 'j konger | blog',
@@ -11,11 +12,13 @@ export async function GET(context) {
         site: context.site,
         items: posts.map((post) => {
             const item = {
-                link: post.url,
-                ...post.frontmatter,
+              title: post.data.title,
+              pubDate: post.data.pubDate,
+              link: `/posts/${post.id}`,
+              description: 'post'
             }
-            if( post.compiledContent ) {
-                item.content = sanitizeHtml(post.compiledContent())
+            if( post.rendered.html ) {
+                item.content = post.rendered.html
             } else {
                 item.content = 'this is a special post! to view it please open in a browser'
             }
