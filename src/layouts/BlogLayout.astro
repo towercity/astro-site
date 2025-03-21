@@ -125,7 +125,7 @@ const { pageTitle } = Astro.props;
 
     main {
         padding-top: 2.5rem;
-        padding-inline: 1rem;
+        padding-inline: 1.6rem;
         max-width: 1300px;
         margin-inline: auto;
         gap: 2rem;
@@ -162,5 +162,26 @@ const { pageTitle } = Astro.props;
                 margin-inline: auto;
             }
         }
+    }
+
+    blockquote {
+        padding-inline: 1rem;
+        border: 1px solid var(--color-foreground);
+        background: var(--color-background--secondary);
+        border-radius: 1rem;
+
+        &:has(h4) {
+            margin-left: -1.5rem;
+            float: right;
+            width: 50%;
+            position: relative;
+            left: 2.5rem;
+        }
+    }
+
+    details {
+        background-color: var(--color-background--secondary);
+        padding: 1rem;
+        border-radius: 1rem;
     }
 </style>
