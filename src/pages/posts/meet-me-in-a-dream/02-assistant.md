@@ -1,7 +1,7 @@
 ---
 pubDate: 2024-03-26
 layout: ../../../layouts/MarkdownPostLayout.astro
-title: "Assistant"
+title: "Assistant, by Shigesato Itoi"
 tags: [ "shigesato itoi", "meet me in a dream", "translation" ]
 ---
 
