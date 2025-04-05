@@ -15,7 +15,7 @@ a few notes on my translations of Meet Me In a Dream:
 (with links to translation, if available)
 - ア
 	- [Eisenhower](/posts/meet-me-in-a-dream/01-eisenhower)
-	- Assistant
+	- [Assistant](/posts/meet-me-in-a-dream/02-assistant)
 	- Asparagus
 	- Apartment
 	- Work

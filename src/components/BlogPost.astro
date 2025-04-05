@@ -1,12 +1,36 @@
 ---
 import ContentBlock from "./ContentBlock.astro";
 
-const { url, title } = Astro.props;
+const { post } = Astro.props;
+
+const url = `/posts/${post.id}`;
+const title = post.data.title;
+const html = post.rendered.html;
+const date = new Date(post.data.pubDate).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+});
 ---
 
-<ContentBlock title={title} link={url}>
+<ContentBlock title={date} link={url}>
+    <h2><a href={url}>{title}</a></h2>
+    <Fragment set:html={html} />
     <slot />
-    <p>
-        <a href={url}>(view post)</a>
-    </p>
 </ContentBlock>
+
+<style>
+    h2 a {
+        color: unset;
+        text-decoration-color: transparent;
+        transition: text-decoration-color 150ms ease-out; 
+        
+        &::after {
+            content: " ⇒";
+        }
+
+        &:hover {
+            text-decoration-color: unset;
+        }
+    }
+</style>

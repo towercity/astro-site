@@ -1,13 +1,13 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
-import Pagination from "../../components/Pagination.astro"
+import Pagination from "../../components/Pagination.astro";
 
 export async function getStaticPaths({ paginate }) {
-    const allPosts = await getCollection("blog");
-    allPosts.sort((a, b) => {
+    const collection = await getCollection("blog");
+    const allPosts = collection.sort((a, b) => {
         return Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate);
     });
 
@@ -15,6 +15,11 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
+
+console.log(page.data[0].rendered.html)
+const {Content, headings} = await render(page.data[0])
+console.log(Content, headings)
+
 
 const pageTitle = "blog";
 ---
@@ -24,10 +29,9 @@ const pageTitle = "blog";
 
     {
         page.data.map((post) => (
-            <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
+            <BlogPost post={post} />
         ))
     }
 
     <Pagination page={page} />
 </BlogLayout>
-

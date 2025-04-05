@@ -2,10 +2,17 @@
 import ContentBlock from "../components/ContentBlock.astro";
 import BlogLayout from "./BlogLayout.astro";
 const { frontmatter } = Astro.props;
+
+const date = new Date(frontmatter.pubDate).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+});
 ---
 
+
 <BlogLayout pageTitle={frontmatter.title}>
-    <ContentBlock title=`posted ${frontmatter.pubDate.slice(0, 10)}` fullWidth>
+    <ContentBlock title=`${date}` fullWidth>
         <slot />
     </ContentBlock>
     <ContentBlock title="tags">
