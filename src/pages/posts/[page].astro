@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import Pagination from "../../components/Pagination.astro"
+
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await getCollection("blog");
+    allPosts.sort((a, b) => {
+        return Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate);
+    });
+
+    return paginate(allPosts, { pageSize: 5 });
+}
+
+const { page } = Astro.props;
+
+const pageTitle = "blog";
+---
+
+<BlogLayout pageTitle={pageTitle}>
+    <Pagination page={page} />
+
+    {
+        page.data.map((post) => (
+            <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
+        ))
+    }
+
+    <Pagination page={page} />
+</BlogLayout>
+
