@@ -2,7 +2,7 @@
 title: about site
 ---
 
-hi i am j, this is my website, check my [blog](/blog), or maybe other things
+hi i am j, this is my website, check my [blog](/posts/1), or maybe other things
 
 try:
 - [meet me in a dream translation](/posts/meet-me-in-a-dream/00-intro)
