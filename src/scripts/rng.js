@@ -19,3 +19,5 @@ const randomItemFrom = (array) => {
 const random = (range = 1) => {
   return Math.random() * range;
 };
+
+export { randomItemFrom, random };

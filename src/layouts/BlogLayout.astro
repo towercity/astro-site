@@ -1,188 +1,191 @@
 ---
+import { Image } from "astro:assets";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Island from "../components/Island.astro";
 
-import { Image } from "astro:assets";
 import sideImage from "../img/side.png";
-import ContentBlock from "../components/ContentBlock.astro";
+
+import { randomItemFrom } from "../scripts/rng";
+import { taglines } from "../data/taglines";
 
 const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout>
-    <Header pageTitle={pageTitle} />
-    <main class="content">
-        <div class="left">
-            <div class="left-content">
-                <Island noPadding>
-                    <a href="/" style="line-height:0;">
-                        <Image
-                            src={sideImage}
-                            width="450"
-                            alt="A beautiful building in simulated night."
-                        />
-                    </a>
-                </Island>
-                <Island> mountains and websites </Island>
-            </div>
-        </div>
-        <div class="right">
-                <h1>{pageTitle}</h1>
-            <article class="page">
-                <slot />
-            </article>
-        </div>
-    </main>
+  <Header pageTitle={pageTitle} />
+  <main class="content">
+    <div class="left">
+      <div class="left-content">
+        <Island noPadding>
+          <a href="/" style="line-height:0;">
+            <Image
+              src={sideImage}
+              width="450"
+              alt="A beautiful building in simulated night."
+            />
+          </a>
+        </Island>
+        <Island> {randomItemFrom(taglines)}</Island>
+      </div>
+    </div>
+    <div class="right">
+      <h1>{pageTitle}</h1>
+      <article class="page">
+        <slot />
+      </article>
+    </div>
+  </main>
 </BaseLayout>
 
 <style is:global>
-    :root {
-        color-scheme: light dark;
-        font-size: 18px;
+  :root {
+    color-scheme: light dark;
+    font-size: 18px;
 
-        --color-light: #ffecff;
-        --color-dark: #01008c;
-        --color-dark--secondary: #01004d;
-        --color-light--secondary: #ffe5ff;
+    --color-light: #ffecff;
+    --color-dark: #01008c;
+    --color-dark--secondary: #01004d;
+    --color-light--secondary: #ffe5ff;
 
-        --color-foreground: light-dark(var(--color-dark), var(--color-light));
-        --color-background: light-dark(var(--color-light), var(--color-dark));
-        --color-background--secondary: light-dark(
-            var(--color-light--secondary),
-            var(--color-dark--secondary)
-        );
+    --color-foreground: light-dark(var(--color-dark), var(--color-light));
+    --color-background: light-dark(var(--color-light), var(--color-dark));
+    --color-background--secondary: light-dark(
+      var(--color-light--secondary),
+      var(--color-dark--secondary)
+    );
+  }
+
+  body {
+    font-family: Garamond, Georgia, serif;
+    color: var(--color-foreground);
+    line-height: 1.25;
+    margin: 0;
+    background:
+      linear-gradient(
+          135deg,
+          var(--color-background--secondary) 25%,
+          transparent 25%
+        ) -50px 0,
+      linear-gradient(
+          225deg,
+          var(--color-background--secondary) 25%,
+          transparent 25%
+        ) -50px 0,
+      linear-gradient(
+        315deg,
+        var(--color-background--secondary) 25%,
+        transparent 25%
+      ),
+      linear-gradient(
+        45deg,
+        var(--color-background--secondary) 25%,
+        transparent 25%
+      );
+    background-size: 100px 100px;
+    background-color: var(--color-background);
+    background-attachment: fixed;
+  }
+
+  .with-shadow {
+    background: var(--color-background);
+    filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-block: 0.5em;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5em;
+    gap: 0.5rem;
+    position: fixed;
+    z-index: 10;
+
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    border-bottom: 1px solid var(--color-foreground);
+
+    a {
+      color: var(--color-foreground);
+      text-decoration: none;
     }
+  }
 
-    body {
-        font-family:Garamond, Georgia, serif;
-        color: var(--color-foreground);
-        line-height: 1.25;
-        margin: 0;
-        background:
-            linear-gradient(
-                    135deg,
-                    var(--color-background--secondary) 25%,
-                    transparent 25%
-                ) -50px 0,
-            linear-gradient(
-                    225deg,
-                    var(--color-background--secondary) 25%,
-                    transparent 25%
-                ) -50px 0,
-            linear-gradient(
-                315deg,
-                var(--color-background--secondary) 25%,
-                transparent 25%
-            ),
-            linear-gradient(
-                45deg,
-                var(--color-background--secondary) 25%,
-                transparent 25%
-            );
-        background-size: 100px 100px;
-        background-color: var(--color-background);
-        background-attachment: fixed;
+  .header-links {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0;
     }
+  }
 
-    .with-shadow {
-        background: var(--color-background);
-        filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
-    }
+  main {
+    padding-top: 2.5rem;
+    padding-inline: 1.6rem;
+    max-width: 1300px;
+    margin-inline: auto;
+    gap: 2rem;
 
-    h1 {
-        font-size: 1.9rem;
-        margin-block: 0.5em;
-    }
+    > .left {
+      padding-top: 8%;
+      max-width: 452px;
 
-    header {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0.5em;
-        gap: 0.5rem;
+      .left-content {
         position: fixed;
-        z-index: 10;
-
-        background-color: var(--color-background);
-        color: var(--color-foreground);
-        border-bottom: 1px solid var(--color-foreground);
-
-        a {
-            color: var(--color-foreground);
-            text-decoration: none;
-        }
+      }
     }
 
-    .header-links {
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 0.5rem;
-            padding: 0;
-        }
+    > .right {
+      padding-top: 25vh;
+      padding-bottom: 10%;
+
+      z-index: 5;
+      max-width: calc(80rch + 25px);
+      margin-left: auto;
     }
 
-    main {
-        padding-top: 2.5rem;
-        padding-inline: 1.6rem;
-        max-width: 1300px;
+    @media screen and (max-width: 1300px) {
+      > .left {
         margin-inline: auto;
-        gap: 2rem;
-
-        > .left {
-            padding-top: 8%;
-            max-width: 452px;
-
-            .left-content {
-                position: fixed;
-            }
+        .left-content {
+          position: initial;
         }
+      }
 
-        > .right {
-            padding-top: 25vh;
-            padding-bottom: 10%;
-
-            z-index: 5;
-            max-width: calc(80rch + 25px);
-            margin-left: auto;
-        }
-
-        @media screen and (max-width: 1300px) {
-            > .left {
-                margin-inline: auto;
-                .left-content {
-                    position: initial;
-                }
-            }
-
-            > .right {
-                padding-top: 0;
-                margin-left: unset;
-                margin-inline: auto;
-            }
-        }
+      > .right {
+        padding-top: 0;
+        margin-left: unset;
+        margin-inline: auto;
+      }
     }
+  }
 
-    blockquote {
-        padding-inline: 1rem;
-        border: 1px solid var(--color-foreground);
-        background: var(--color-background--secondary);
-        border-radius: 1rem;
+  blockquote {
+    padding-inline: 1rem;
+    border: 1px solid var(--color-foreground);
+    background: var(--color-background--secondary);
+    border-radius: 1rem;
 
-        &:has(h4) {
-            margin-left: -1.5rem;
-            float: right;
-            width: 50%;
-            position: relative;
-            left: 2.5rem;
-        }
+    &:has(h4) {
+      margin-left: -1.5rem;
+      float: right;
+      width: 50%;
+      position: relative;
+      left: 2.5rem;
     }
+  }
 
-    details {
-        background-color: var(--color-background--secondary);
-        padding: 1rem;
-        border-radius: 1rem;
-    }
+  details {
+    background-color: var(--color-background--secondary);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
 </style>
