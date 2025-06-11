@@ -24,6 +24,7 @@ const { pageTitle } = Astro.props;
               src={sideImage}
               width="450"
               alt="A beautiful building in simulated night."
+              class="header-img"
             />
           </a>
         </Island>
@@ -60,6 +61,12 @@ const { pageTitle } = Astro.props;
       var(--color-light--secondary),
       var(--color-dark--secondary)
     );
+    --color-foreground--secondary: light-dark(
+      var(--color-dark--secondary),
+      var(--color-light--secondary)
+    );
+
+    --color-font: var(--color-foreground);
   }
 
   body {
@@ -103,6 +110,10 @@ const { pageTitle } = Astro.props;
     margin-block: 0.5em;
   }
 
+  a {
+      color: var(--color-foreground--secondary);
+  }
+
   header {
     width: 100%;
     display: flex;
@@ -138,6 +149,10 @@ const { pageTitle } = Astro.props;
     max-width: 1300px;
     margin-inline: auto;
     gap: 2rem;
+
+    .header-img {
+        opacity: 0.1;
+    }
 
     > .left {
       padding-top: 8%;
