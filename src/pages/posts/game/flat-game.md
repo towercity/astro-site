@@ -6,6 +6,8 @@ tags:
   - gamejam
   - project
   - flat-game
+  - writing
+  - poem
 pubDate: 2025-06-08
 ---
 

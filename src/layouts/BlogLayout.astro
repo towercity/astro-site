@@ -187,5 +187,12 @@ const { pageTitle } = Astro.props;
     background-color: var(--color-background--secondary);
     padding: 1rem;
     border-radius: 1rem;
+
+    summary {
+      cursor: pointer;
+    }
+
+    & ~ details, &:has( ~ details ) {
+        border-radius: 0;
   }
 </style>
