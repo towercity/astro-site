@@ -44,10 +44,15 @@ const { pageTitle } = Astro.props;
     color-scheme: light dark;
     font-size: 18px;
 
-    --color-light: #ffecff;
-    --color-dark: #01008c;
-    --color-dark--secondary: #01004d;
-    --color-light--secondary: #ffe5ff;
+    --01: #FFF1E8;
+    --02: #FFCCAA;
+    --03: #7E2553;
+    --04: #1D2B53;
+
+    --color-light: var(--01);
+    --color-dark: var(--04);
+    --color-dark--secondary: var(--03);
+    --color-light--secondary: var(--02);
 
     --color-foreground: light-dark(var(--color-dark), var(--color-light));
     --color-background: light-dark(var(--color-light), var(--color-dark));
