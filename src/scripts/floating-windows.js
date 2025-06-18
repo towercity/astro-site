@@ -1,21 +1,25 @@
 // get all the floaters on the screen
 const floatingWindows = Array.from(
   document.querySelectorAll(".floating-window"),
-).map((wind) => {
+).map((el) => {
+  const { style, offsetLeft, offsetTop, offsetWidth, offsetHeight } = el;
+
+  // then return a lot of data, so we can use it elsewhere if we want
   return {
-    el: wind,
-    left: wind.offsetLeft,
-    top: wind.offsetTop,
-    width: wind.offsetWidth,
-    height: wind.offsetHeight,
-    style: wind.style,
+    el,
+    offsetLeft,
+    offsetTop,
+    offsetWidth,
+    offsetHeight,
+    style,
   };
 });
 
-// set their positions in css now
+// we have to set up the CSS in a separate call; unsure why
 floatingWindows.forEach((wind) => {
   wind.style.position = "absolute";
-  ["left", "top", "width", "height"].forEach((rule) => {
-    wind.style[rule] = `${wind[rule]}px`;
+  ["top", "left", "width", "height"].forEach((rule) => {
+    wind.style[rule] =
+      `${wind[`offset${rule[0].toUpperCase() + rule.slice(1)}`]}px`;
   });
 });
