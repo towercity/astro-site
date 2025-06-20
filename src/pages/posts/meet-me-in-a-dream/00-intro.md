@@ -8,7 +8,7 @@ tags: [ "haruki murakami", "shigesato itoi", "meet me in a dream", "translation"
 a few notes on my translations of Meet Me In a Dream:
 - this is not the most accurate translation you’ll ever find. my interest in the project is mostly literary, and my japanese might be called “studied but inept,” like a novice monk in 1500’s latin
 - i know of the other partial translation online, but i’m not consulting it, for same reasons as above
-- respecting authorial intentions, as expressed in the books foreword, i will not be marking who wrote what on this page. that’s only there with the stories themselves 
+- respecting authorial intentions, as expressed in the books foreword, i will not be marking who wrote what on this page. that’s only there with the stories themselves
 - let me know what you think, imagined reader. contact link’s there in the menu
 
 ## stories
@@ -16,12 +16,12 @@ a few notes on my translations of Meet Me In a Dream:
 - ア
 	- [Eisenhower](/posts/meet-me-in-a-dream/01-eisenhower)
 	- [Assistant](/posts/meet-me-in-a-dream/02-assistant)
-	- Asparagus
+	- [Asparagus](/posts/meet-me-in-a-dream/03-asparagus)
 	- Apartment
 	- Work
 	- Allergies
 	- Encore
-	- Antithesis 
+	- Antithesis
 - イ
 	- Interview
 	- Indian
@@ -29,9 +29,9 @@ a few notes on my translations of Meet Me In a Dream:
 - ウ
 	- West Coast
 - エ
-	- Etiquette 
+	- Etiquette
 	- Elite
-	- Elevator 
+	- Elevator
 - オ
 	- Sardines in Oil
 	- All Night
@@ -123,7 +123,7 @@ a few notes on my translations of Meet Me In a Dream:
 	- Pony Tail
 - マ
 	- Margarine
-	- Masquerade 
+	- Masquerade
 	- Match
 	- May
 - ミ
