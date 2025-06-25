@@ -65,6 +65,10 @@ end
 ```
 
 isn't plaintext wonderful!
-the above is essentially nonsense requiring a day or two of doing math (i have an MFA in creative writing), graph paper, highlighters, coordinate writing, refusing to look up answers because I'm doing this to keep my own creative forces occupied, not to make the most technically proper game. i will not be adding these notes to the page as ive moved apartment recently and dont wanna hafta get me scanner out. in place, let's just explain the finished process
+the above is essentially nonsense requiring a day or two of doing math (i have an MFA in creative writing), graph paper, highlighters, coordinate writing, refusing to look up answers because I'm doing this to keep my own creative forces occupied, not to make the most technically proper game. i will not be adding these notes to the page as ive moved apartment recently and dont wanna hafta get me scanner out. in place, let's just explain the finished process:
+
+in essense, thru guess-and-check i determined that for each new pixel of distance an ant is able to sense,
+
+OH SHIT: THIS ONLY LOOKS AT THE OUTER RING: address in text
 
 end: we can of cousrse do this w/o x and y passed, as relative; link to comment
