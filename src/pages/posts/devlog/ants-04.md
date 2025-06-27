@@ -67,8 +67,20 @@ end
 isn't plaintext wonderful!
 the above is essentially nonsense requiring a day or two of doing math (i have an MFA in creative writing), graph paper, highlighters, coordinate writing, refusing to look up answers because I'm doing this to keep my own creative forces occupied, not to make the most technically proper game. i will not be adding these notes to the page as ive moved apartment recently and dont wanna hafta get me scanner out. in place, let's just explain the finished process:
 
-in essense, thru guess-and-check i determined that for each new pixel of distance an ant is able to sense,
+in essense, thru guess-and-check i determined that for each new pixel of distance an ant is able to sense, another four pixels need to be sensed around it. i dont wanna go into the formula because i wrote it about a week ago and have since forgot it, but suffice it to say in the local variable lines at the top of the for loop we add or subtract a specific amount from the passed distance to create four new points of 'vision'. they mirror each other quite well, so we can add them with only a few calculations. as you can see as well, the first loop works a little different in how its mirrored (not how our x and y variables are altered by the loop number: this is what causes this), so we get our points of vision differently
 
-OH SHIT: THIS ONLY LOOKS AT THE OUTER RING: address in text
+each of these points is added to an array, which is then returned: this is an array of all our senses points
 
-end: we can of cousrse do this w/o x and y passed, as relative; link to comment
+math-brained types might notice this only gives us our outer ring of vision. yep: this only returns our outer ring. this is on purpose, as it adds a bit more flexability: we can use the function to determine what pixels are a certain distance of steps away with this one function or, by calling the function from within a loop, determine all the pixels that distance or less. i like that
+
+(for the moment, imagining myself saving memory wheter I am or not, i'm only looking at the outer ring in code later. but, as shown above, it's an easy change if i'm incorrect)
+
+(also, not how easily this could be re-written to not need an x and y variable: we could simply return a distance amount rather than an absolute pixel. oh well, i realized that when writing this up. maybe, if it ends up convenient, we'll change that later)
+
+### using `find_nearby_dots`
+
+> ####
+>
+> in this paragraph here i'm insulting myself a week or so ago for not understanding how my earlier movement system worked. to skip ahead to the explanation, i was not balancing movement well. i was forgetting that my previous randomization took the option of no movement into account to create more jagged, natural seeming motions. read on to see how badly that ended up
+
+back to our ant movement functions, _surely_ we can just slot this into our movement functions, right?? _surely_ this is simple. see line 105 in the github, see our local variable to hold these produced sensed squares, `scent_squares`. we've simply added another branch to our movement if statement, which is _surely_ going to add a "more likely" movement choice, in comparison to our 2% chance movements from before
