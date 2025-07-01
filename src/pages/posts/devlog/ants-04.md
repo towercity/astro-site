@@ -81,6 +81,10 @@ math-brained types might notice this only gives us our outer ring of vision. yep
 
 > ####
 >
-> in this paragraph here i'm insulting myself a week or so ago for not understanding how my earlier movement system worked. to skip ahead to the explanation, i was not balancing movement well. i was forgetting that my previous randomization took the option of no movement into account to create more jagged, natural seeming motions. read on to see how badly that ended up
+> in this paragraph here i'm insulting myself a week or so ago for not understanding how my earlier movement system worked. to skip ahead to the explanation, i was not balancing movement well. i was forgetting that my previous randomization took the option of no movement into account to create more jagged, natural seeming motions. this means that while there's still only about a two percent chance to move each cardinal direction, there's now a 92% chance to move toward a sensed food pixel, and no chance to stay put. this means that every frame, of which there are 60 in a second, our ants will move. that's stupid fast, in practice
 
-back to our ant movement functions, _surely_ we can just slot this into our movement functions, right?? _surely_ this is simple. see line 105 in the github, see our local variable to hold these produced sensed squares, `scent_squares`. we've simply added another branch to our movement if statement, which is _surely_ going to add a "more likely" movement choice, in comparison to our 2% chance movements from before
+back to our ant movement functions, _surely_ we can just slot this into our movement functions, right?? _surely_ this is simple. see [line 105](https://github.com/towercity/pico-8/blob/main/ants.p8#L105) in the github, see our local variable to hold these produced sensed squares, `scent_squares`. we've simply added another branch to our movement if statement, which is _surely_ going to add a "more likely" movement choice, in comparison to our 2% chance movements from before
+
+we use our loop pixels function to loop thru the sensed pixels we've gathered and check:
+
+// add aside: are we moving all directions each frame? i think so
