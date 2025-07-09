@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownPostLayout.astro
-pubDate: 2025-06-10
+pubDate: 2025-07-09
 title: "ants devlog 4: what if an ant could sense when food's nearby?"
 tags:
 - pico-8
