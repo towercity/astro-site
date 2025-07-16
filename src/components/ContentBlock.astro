@@ -1,56 +1,57 @@
 ---
 import Island from "./Island.astro";
 
-const { title, link  } = Astro.props;
+const { title, link } = Astro.props;
 ---
 
 <div class=`content-block-wrapper`>
-    {
-        title && (
-            <Island noPadding>
-                <div class="content-title-wrap">
-                    {link && (
-                        <a href={link}>
-                            <h3>{title}</h3>
-                        </a>
-                    )}
-                    {!link && <h3>{title}</h3>}
-                </div>
-            </Island>
-        )
-    }
-    <Island bottomMargin>
-        <div class="content-content-wrap">
-            <slot />
+  {
+    title && (
+      <Island noPadding>
+        <div class="content-title-wrap">
+          {link && (
+            <a href={link}>
+              <h3>{title}</h3>
+            </a>
+          )}
+          {!link && <h3>{title}</h3>}
         </div>
-    </Island>
+      </Island>
+    )
+  }
+  <Island bottomMargin>
+    <div class="content-content-wrap">
+      <slot />
+    </div>
+  </Island>
 </div>
 
 <style>
-    .content-title-wrap {
-        padding-inline: 1em;
-        padding-block: 0.75em;
+  .content-title-wrap {
+    padding-inline: 1em;
+    padding-block: 0.75em;
 
-        h3 {
-            margin-block: 0;
-            font-size: 1em;
-            font-weight: normal;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--color-foreground);
-        }
+    h3 {
+      margin-block: 0;
+      font-size: 1em;
+      font-weight: normal;
     }
 
-    .content-content-wrap {
-        padding: 1em;
-
-        > *:first-child {
-            margin-block-start: 0;
-        }
-        > *:last-child {
-            margin-block-end: 0;
-        }
+    a {
+      text-decoration: none;
+      color: var(--color-foreground);
     }
+  }
+
+  .content-content-wrap {
+    padding: 1em;
+    max-width: 100%;
+
+    > *:first-child {
+      margin-block-start: 0;
+    }
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
 </style>

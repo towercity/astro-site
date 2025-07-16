@@ -194,12 +194,14 @@ const { pageTitle } = Astro.props;
     background: var(--color-background--secondary);
     border-radius: 1rem;
 
-    &:has(h4) {
-      margin-left: -1.5rem;
-      float: right;
-      width: 50%;
-      position: relative;
-      left: 2.5rem;
+    @media screen and (min-width: 550px) {
+        &:has(h4) {
+            margin-left: -1.5rem;
+            float: right;
+            width: 50%;
+            position: relative;
+            left: 2.5rem;
+        }
     }
   }
 
