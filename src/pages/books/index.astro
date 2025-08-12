@@ -18,7 +18,7 @@ const pageTitle = "books";
     <ContentBlock title="here are some books i have read but not necessarily finished ">
       <div class="book-grid">
       {
-        collection.map((book) => {
+        shuffledCollection.map((book) => {
           const {
             data: { title, author, finished, cover },
             id,
