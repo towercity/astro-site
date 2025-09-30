@@ -34,7 +34,7 @@ a few notes on my translations of Meet Me In a Dream:
 	- Elevator
 - オ
 	- Sardines in Oil
-	- All Night
+	- [All Night](/posts/meet-me-in-a-dream/17-all-night)
 	- Onion Soup
 - カ
 	- Carpet
