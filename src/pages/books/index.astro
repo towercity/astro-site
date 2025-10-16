@@ -26,9 +26,11 @@ const pageTitle = "books";
           return (
             <div class="book">
               {cover &&
-              <img src={cover}></img> || <div class="no-cover-insert">
-                  {title}, by {author}
-              </div>}
+                <img src={cover}></img>
+              }
+              <div class="insert">
+                {title}, by {author}
+              </div>
             </div>
           );
         })
@@ -47,12 +49,26 @@ const pageTitle = "books";
         width: 128px;
         height: 200px;
         overflow: hidden;
+        position: relative;
+        
+        img {
+          z-index: 2;
+          position: relative;
+          transition: opacity 0.2s ease-in;
+          
+          &:hover {
+            opacity: 0;
+          }
+        }
 
-        .no-cover-insert {
+        .insert {
             border: 1px solid var(--color-foreground);
             height: 100%;
             padding: 0.5em;
             text-align: center;
+            position: absolute;
+            top: 0;
+            z-index: 1;
         }
     }
 }
