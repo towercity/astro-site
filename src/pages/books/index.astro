@@ -50,12 +50,15 @@ const pageTitle = "books";
         height: 200px;
         overflow: hidden;
         position: relative;
-        
+
         img {
           z-index: 2;
           position: relative;
           transition: opacity 0.2s ease-in;
-          
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
           &:hover {
             opacity: 0;
           }
