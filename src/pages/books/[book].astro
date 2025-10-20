@@ -1,0 +1,41 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+
+
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import ContentBlock from "../../components/ContentBlock.astro"
+
+export async function getStaticPaths() {
+	const collection = await getCollection("books");
+
+	return collection.map((bookObj) => {
+		return {
+			params: { book: bookObj.id },
+			props: { bookObj: bookObj.data },
+		};
+	});
+}
+
+const { book } = Astro.params;
+const {
+	bookObj: {
+		title,
+		author,
+		started,
+		finished,
+		cover,
+		content
+	}
+} = Astro.props;
+
+const { Content } = await render(Astro.props.bookObj);
+
+console.log(Astro.props);
+console.log(Content)
+---
+
+<BlogLayout pageTitle={title}>
+	<ContentBlock title=`${title} by ${author}`>
+	{content}
+	</ContentBlock>
+</BlogLayout>
