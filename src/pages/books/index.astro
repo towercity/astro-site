@@ -11,6 +11,8 @@ const shuffledCollection = collection
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value);
 
+console.log(shuffledCollection)
+
 const pageTitle = "books";
 ---
 
@@ -46,8 +48,8 @@ const pageTitle = "books";
     gap: 1rem;
 
     .book {
-        width: 128px;
-        height: 200px;
+        width: 150px;
+		min-height: 240px;
         overflow: hidden;
         position: relative;
 
@@ -72,6 +74,7 @@ const pageTitle = "books";
             position: absolute;
             top: 0;
             z-index: 1;
+            overflow: clip;
         }
     }
 }
