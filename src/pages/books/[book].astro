@@ -24,18 +24,17 @@ const {
 		started,
 		finished,
 		cover,
-		content
+		content,
+		status
 	}
 } = Astro.props;
 
-const { Content } = await render(Astro.props.bookObj);
+console.log({book, obj: Astro.props.bookObj})
 
-console.log(Astro.props);
-console.log(Content)
 ---
 
 <BlogLayout pageTitle={title}>
 	<ContentBlock title=`${title} by ${author}`>
-	{content}
+	{status}
 	</ContentBlock>
 </BlogLayout>
