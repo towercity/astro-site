@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import BookList from "../../../components/Booklist.astro"
+import Pagination from "../../../components/Pagination.astro";
+
+
+export async function getStaticPaths({ paginate }) {
+	const statusList = [
+		'reading',
+		'read',
+		'unfinished',
+	]
+	
+	const collection = await getCollection("books")
+	return statusList.flatMap(status => {
+		const shuffledCollection = collection
+		  .map(value => ({ value, sort: Math.random() }))
+		  .sort((a, b) => a.sort - b.sort)
+		  .map(({ value }) => value)
+		  .filter(book => status === book.data.status);
+		  
+		return paginate(shuffledCollection, { 
+			params: {status},
+			pageSize: 100 
+		});
+	})
+
+
+}
+
+const {page} = Astro.props;
+const {status} = Astro.params;
+  
+const pageTitle = "books";
+
+const getStatString = status => {
+	switch (status) {
+		case 'reading':
+			return "i'm reading";
+		case 'read':
+			return "i've read";
+		case 'unfinished':
+			return "i've left unfinished";
+	}
+}
+---
+
+<BlogLayout pageTitle={pageTitle}>
+    <Pagination page={page} />
+	<BookList 
+		collection={page.data}
+		title=`here are some books ${getStatString(status)}`
+	  />
+    <Pagination page={page} />
+</BlogLayout>

@@ -11,7 +11,6 @@ export async function getStaticPaths() {
         return Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate);
     });
 
-    console.log(allPosts)
 
     const uniqueTags = [
         ...new Set(allPosts.map((post) => post.data.tags).flat()),
@@ -30,6 +29,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+console.log(Astro.params);
 ---
 
 <BlogLayout pageTitle={tag}>

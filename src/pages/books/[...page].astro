@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import BookList from "../../components/Booklist.astro"
+import Pagination from "../../components/Pagination.astro";
+
+
+
+
+export async function getStaticPaths({ paginate }) {
+    const collection = await getCollection("books");
+	const shuffledCollection = collection
+  	  .map(value => ({ value, sort: Math.random() }))
+  	  .sort((a, b) => a.sort - b.sort)
+  	  .map(({ value }) => value);
+
+    return paginate(shuffledCollection, { pageSize: 100 });
+}
+
+const pageTitle = "books";
+const { page } = Astro.props;
+---
+
+<BlogLayout pageTitle={pageTitle}>
+    <Pagination page={page} />
+  <BookList
+    collection={page.data}
+    title="here are some books i have read but not necessarily finished"
+  />
+    <Pagination page={page} />
+</BlogLayout>
+
