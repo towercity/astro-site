@@ -1,14 +1,15 @@
 ---
 import Island from "./Island.astro";
 
-const { title, link } = Astro.props;
+const { title, link, isContainer } = Astro.props;
+console.log(Astro.props)
 ---
 
 <div class=`content-block-wrapper`>
   {
     title && (
       <Island noPadding>
-        <div class="content-title-wrap">
+      <div class="content-title-wrap">
           {link && (
             <a href={link}>
               <h3>{title}</h3>
@@ -19,7 +20,7 @@ const { title, link } = Astro.props;
       </Island>
     )
   }
-  <Island bottomMargin>
+  <Island bottomMargin isContainer={isContainer}>
     <div class="content-content-wrap">
       <slot />
     </div>

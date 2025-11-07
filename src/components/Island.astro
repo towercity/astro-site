@@ -1,5 +1,6 @@
 ---
-const { hideShadow, noPadding, bottomMargin, class: className } = Astro.props;
+const { hideShadow, noPadding, bottomMargin, class: className, isContainer } = Astro.props;
+console.log(Astro.props)
 ---
 
 <div
@@ -9,6 +10,7 @@ const { hideShadow, noPadding, bottomMargin, class: className } = Astro.props;
         { "with-shadow": !hideShadow },
         { "with-padding": !noPadding },
         { "bottom-margin": bottomMargin },
+        { "is-container": isContainer },
     ]}
 >
     <slot />
@@ -18,7 +20,10 @@ const { hideShadow, noPadding, bottomMargin, class: className } = Astro.props;
     .island {
         display: flex;
         border: 1px solid var(--color-foreground);
-        container: island / inline-size;
+        
+        &.is-container{
+            container: island / inline-size;
+        }
 
         &.with-padding {
             padding: 0.5rem;

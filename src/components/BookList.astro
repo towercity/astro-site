@@ -4,7 +4,7 @@ import ContentBlock from "./ContentBlock.astro";
 const {collection, title} = Astro.props
 ---
 
-<ContentBlock title={title}>
+<ContentBlock title={title} isContainer>
 	<div class="book-grid">
 	{
 		collection.map((book) => {
