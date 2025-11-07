@@ -148,6 +148,7 @@ const { pageTitle } = Astro.props;
     padding-inline: 1.6rem;
     max-width: 1300px;
     margin-inline: auto;
+    display: flex;
     gap: 2rem;
 
     .header-img {
@@ -159,7 +160,7 @@ const { pageTitle } = Astro.props;
       max-width: 452px;
 
       .left-content {
-        position: fixed;
+        /* position: fixed; */
       }
     }
 
@@ -172,7 +173,9 @@ const { pageTitle } = Astro.props;
       margin-left: auto;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      
       > .left {
         margin-inline: auto;
         .left-content {
