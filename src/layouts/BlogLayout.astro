@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import BaseLayout from "../layouts/BaseLayout.astro";
+import GridsLayout from "../layouts/GridsLayout.astro";
 import Header from "../components/Header.astro";
 import Island from "../components/Island.astro";
 
@@ -13,9 +13,7 @@ import { taglines } from "../data/taglines";
 const { pageTitle } = Astro.props;
 ---
 
-<BaseLayout>
-  <Header pageTitle={pageTitle} />
-  <main class="content">
+<GridsLayout {...Astro.props} >
     <div class="left">
       <div class="left-content">
         <Island noPadding>
@@ -37,9 +35,10 @@ const { pageTitle } = Astro.props;
         <slot />
       </article>
     </div>
-  </main>
-</BaseLayout>
+</GridsLayout>
 
+
+<!--
 <style is:global>
   :root {
     color-scheme: light dark;
@@ -225,3 +224,4 @@ const { pageTitle } = Astro.props;
         border-radius: 0;
   }
 </style>
+-->
