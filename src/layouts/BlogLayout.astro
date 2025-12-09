@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import BaseLayout from "../layouts/BaseLayout.astro";
+import GridsLayout from "../layouts/GridsLayout.astro";
 import Header from "../components/Header.astro";
 import Island from "../components/Island.astro";
 
@@ -13,215 +13,34 @@ import { taglines } from "../data/taglines";
 const { pageTitle } = Astro.props;
 ---
 
-<BaseLayout>
-  <Header pageTitle={pageTitle} />
-  <main class="content">
-    <div class="left">
-      <div class="left-content">
-        <Island noPadding>
-          <a href="/" style="line-height:0;">
-            <Image
-              src={sideImage}
-              width="450"
-              alt="A beautiful building in simulated night."
-              class="header-img"
-            />
-          </a>
-        </Island>
-        <Island> {randomItemFrom(taglines)}</Island>
-      </div>
-    </div>
-    <div class="right">
+<GridsLayout {...Astro.props} >
+  <Fragment slot="info-column">
+    <Island noPadding>
+      <a href="/" style="line-height:0;">
+         <Image
+           src={sideImage}
+           width="450"
+           alt="A beautiful building in simulated night."
+           class="header-img"
+         />
+       </a>
+     </Island>
+     <Island bottomMargin> {randomItemFrom(taglines)}</Island>
+     <slot name="info-column" />
+  </Fragment>  
+  
+  <Fragment slot="default">
       <h1>{pageTitle}</h1>
       <article class="page">
         <slot />
       </article>
-    </div>
-  </main>
-</BaseLayout>
+  </Fragment>
+</GridsLayout>
 
-<style is:global>
-  :root {
-    color-scheme: light dark;
-    font-size: 18px;
 
-    --01: #FFF1E8;
-    --02: #FFCCAA;
-    --03: #7E2553;
-    --04: #1D2B53;
-
-    --color-light: var(--01);
-    --color-dark: var(--04);
-    --color-dark--secondary: var(--03);
-    --color-light--secondary: var(--02);
-
-    --color-foreground: light-dark(var(--color-dark), var(--color-light));
-    --color-background: light-dark(var(--color-light), var(--color-dark));
-    --color-background--secondary: light-dark(
-      var(--color-light--secondary),
-      var(--color-dark--secondary)
-    );
-    --color-foreground--secondary: light-dark(
-      var(--color-dark--secondary),
-      var(--color-light--secondary)
-    );
-
-    --color-font: var(--color-foreground);
-  }
-
-  body {
-    font-family: Garamond, Georgia, serif;
-    color: var(--color-foreground);
-    line-height: 1.25;
-    margin: 0;
-    background:
-      linear-gradient(
-          135deg,
-          var(--color-background--secondary) 25%,
-          transparent 25%
-        ) -50px 0,
-      linear-gradient(
-          225deg,
-          var(--color-background--secondary) 25%,
-          transparent 25%
-        ) -50px 0,
-      linear-gradient(
-        315deg,
-        var(--color-background--secondary) 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        45deg,
-        var(--color-background--secondary) 25%,
-        transparent 25%
-      );
-    background-size: 100px 100px;
-    background-color: var(--color-background);
-    background-attachment: fixed;
-  }
-
-  .with-shadow {
-    background: var(--color-background);
-    filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
-  }
-
-  h1 {
-    font-size: 1.9rem;
-    margin-block: 0.5em;
-  }
-
-  a {
-      color: var(--color-foreground--secondary);
-  }
-
-  header {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0.5em;
-    gap: 0.5rem;
-    position: fixed;
-    z-index: 10;
-
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    border-bottom: 1px solid var(--color-foreground);
-
-    a {
-      color: var(--color-foreground);
-      text-decoration: none;
+<style>
+	.header-img {
+		opacity: 0.1;
+		min-width: min(96vw, 420px);
     }
-  }
-
-  .header-links {
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 0.5rem;
-      padding: 0;
-    }
-  }
-
-  main {
-    padding-top: 2.5rem;
-    padding-inline: 1.6rem;
-    max-width: 1300px;
-    margin-inline: auto;
-    display: flex;
-    gap: 2rem;
-
-    .header-img {
-        opacity: 0.1;
-    }
-
-    > .left {
-      padding-top: 8%;
-      max-width: 452px;
-
-      .left-content {
-        img {
-          min-width: min(96vw, 420px);
-        }
-      }
-    }
-
-    > .right {
-      padding-top: 25vh;
-      padding-bottom: 10%;
-
-      z-index: 5;
-      max-width: calc(80rch + 25px);
-      min-width: 47vw;
-      margin-inline: auto;
-    }
-
-    @media screen and (max-width: 900px) {
-      flex-direction: column;
-      
-      > .left {
-        margin-inline: auto;
-        .left-content {
-          position: initial;
-          padding-top: 2rem;
-        }
-      }
-
-      > .right {
-        padding-top: 0;
-        margin-left: unset;
-        margin-inline: auto;
-      }
-    }
-  }
-
-  blockquote {
-    padding-inline: 1rem;
-    border: 1px solid var(--color-foreground);
-    background: var(--color-background--secondary);
-    border-radius: 1rem;
-
-    @media screen and (min-width: 550px) {
-        &:has(h4) {
-            margin-left: -1.5rem;
-            float: right;
-            width: 50%;
-            position: relative;
-            left: 2.5rem;
-        }
-    }
-  }
-
-  details {
-    background-color: var(--color-background--secondary);
-    padding: 1rem;
-    border-radius: 1rem;
-
-    summary {
-      cursor: pointer;
-    }
-
-    & ~ details, &:has( ~ details ) {
-        border-radius: 0;
-  }
 </style>

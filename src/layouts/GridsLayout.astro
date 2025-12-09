@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout>
+	<Header pageTitle={pageTitle} />
+	<main class="content">
+		<div class="left">
+			<div class="left-content">
+				<slot name="info-column" />
+			</div>
+		</div>
+		
+		<div class="right">
+			<slot />
+		</div>
+	</main>
+</BaseLayout>
+
+<style is:global>
+  :root {
+	color-scheme: light dark;
+	font-size: 18px;
+
+	--01: #FFF1E8;
+	--02: #FFCCAA;
+	--03: #7E2553;
+	--04: #1D2B53;
+
+	--color-light: var(--01);
+	--color-dark: var(--04);
+	--color-dark--secondary: var(--03);
+	--color-light--secondary: var(--02);
+
+	--color-foreground: light-dark(var(--color-dark), var(--color-light));
+	--color-background: light-dark(var(--color-light), var(--color-dark));
+	--color-background--secondary: light-dark(
+	  var(--color-light--secondary),
+	  var(--color-dark--secondary)
+	);
+	--color-foreground--secondary: light-dark(
+	  var(--color-dark--secondary),
+	  var(--color-light--secondary)
+	);
+
+	--color-font: var(--color-foreground);
+	
+	--site-width: 1300px;
+	--col-min-width: min(452px, 95vw);
+  }
+
+  body {
+	font-family: Garamond, Georgia, serif;
+	color: var(--color-foreground);
+	line-height: 1.25;
+	margin: 0;
+	background:
+	  linear-gradient(
+		  135deg,
+		  var(--color-background--secondary) 25%,
+		  transparent 25%
+		) -50px 0,
+	  linear-gradient(
+		  225deg,
+		  var(--color-background--secondary) 25%,
+		  transparent 25%
+		) -50px 0,
+	  linear-gradient(
+		315deg,
+		var(--color-background--secondary) 25%,
+		transparent 25%
+	  ),
+	  linear-gradient(
+		45deg,
+		var(--color-background--secondary) 25%,
+		transparent 25%
+	  );
+	background-size: 100px 100px;
+	background-color: var(--color-background);
+	background-attachment: fixed;
+  }
+
+  .with-shadow {
+	background: var(--color-background);
+	filter: drop-shadow(0.3em 0.3em 0em var(--color-foreground));
+  }
+
+  h1 {
+	font-size: 1.9rem;
+	margin-block: 0.5em;
+  }
+
+  a {
+	  color: var(--color-foreground--secondary);
+  }
+
+  blockquote {
+	padding-inline: 1rem;
+	border: 1px solid var(--color-foreground);
+	background: var(--color-background--secondary);
+	border-radius: 1rem;
+
+	@media screen and (min-width: 550px) {
+		&:has(h4) {
+			margin-left: -1.5rem;
+			float: right;
+			width: 50%;
+			position: relative;
+			left: 2.5rem;
+		}
+	}
+  }
+
+  details {
+	background-color: var(--color-background--secondary);
+	padding: 1rem;
+	border-radius: 1rem;
+
+	summary {
+	  cursor: pointer;
+	}
+
+	& ~ details, &:has( ~ details ) {
+		border-radius: 0;
+	}
+  }
+  
+	main {
+	  padding-top: calc(2.5rem + 5%);
+	  padding-inline:  min(1.6rem, 2.5vw);
+	  padding-bottom: 10%;
+	  max-width: var(--site-width);
+	  margin-inline: auto;
+	  display: flex;
+	  justify-content: center;
+	  gap: 2rem;
+  
+	  > .left {
+		max-width: var(--col-min-width);
+	  }
+  
+	  > .right {
+		z-index: 5;
+		width: clamp(var(--col-min-width), calc(80rch + 25px), 80vw);
+	  }
+  
+	  @media screen and (max-width: 900px) {
+		flex-direction: column;
+		
+		> .left {
+		  margin-inline: auto;
+		  .left-content {
+			position: initial;
+			padding-top: 2rem;
+		  }
+		}
+  
+		> .right {
+		  padding-top: 0;
+		  margin-left: unset;
+		  margin-inline: auto;
+		}
+	  }
+	}
+</style>
