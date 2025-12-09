@@ -25,7 +25,8 @@ const { pageTitle } = Astro.props;
          />
        </a>
      </Island>
-     <Island> {randomItemFrom(taglines)}</Island>
+     <Island bottomMargin> {randomItemFrom(taglines)}</Island>
+     <slot name="info-column" />
   </Fragment>  
   
   <Fragment slot="default">

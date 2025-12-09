@@ -15,7 +15,7 @@ const date = new Date(frontmatter.pubDate).toLocaleDateString("en-us", {
     <ContentBlock title=`${date}` fullWidth>
         <slot />
     </ContentBlock>
-    <ContentBlock title="tags">
+    <ContentBlock title="tags" slot="info-column">
         <div class="tags">
             {
                 frontmatter.tags.map((tag) => (
