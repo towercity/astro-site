@@ -7,7 +7,7 @@ const { pageTitle } = Astro.props;
 
 <BaseLayout>
 	<Header pageTitle={pageTitle} />
-		<main class="content">
+	<main class="content">
 		<div class="left">
 			<div class="left-content">
 				<slot name="info-column" />
@@ -47,6 +47,9 @@ const { pageTitle } = Astro.props;
 	);
 
 	--color-font: var(--color-foreground);
+	
+	--site-width: 1300px;
+	--col-min-width: min(452px, 95vw);
   }
 
   body {
@@ -94,87 +97,6 @@ const { pageTitle } = Astro.props;
 	  color: var(--color-foreground--secondary);
   }
 
-  header {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 0.5em;
-	gap: 0.5rem;
-	position: fixed;
-	z-index: 10;
-
-	background-color: var(--color-background);
-	color: var(--color-foreground);
-	border-bottom: 1px solid var(--color-foreground);
-
-	a {
-	  color: var(--color-foreground);
-	  text-decoration: none;
-	}
-  }
-
-  .header-links {
-	ul {
-	  list-style: none;
-	  display: flex;
-	  gap: 0.5rem;
-	  padding: 0;
-	}
-  }
-
-  main {
-	padding-top: 2.5rem;
-	padding-inline: 1.6rem;
-	max-width: 1300px;
-	margin-inline: auto;
-	display: flex;
-	gap: 2rem;
-
-	.header-img {
-		opacity: 0.1;
-	}
-
-	> .left {
-	  padding-top: 8%;
-	  max-width: 452px;
-
-	  .left-content {
-		img {
-		  min-width: min(96vw, 420px);
-		}
-	  }
-	}
-
-	> .right {
-	  padding-top: 25vh;
-	  padding-bottom: 10%;
-
-	  z-index: 5;
-	  max-width: calc(80rch + 25px);
-	  min-width: 47vw;
-	  margin-inline: auto;
-	}
-
-	@media screen and (max-width: 900px) {
-	  flex-direction: column;
-	  
-	  > .left {
-		margin-inline: auto;
-		.left-content {
-		  position: initial;
-		  padding-top: 2rem;
-		}
-	  }
-
-	  > .right {
-		padding-top: 0;
-		margin-left: unset;
-		margin-inline: auto;
-	  }
-	}
-  }
-
   blockquote {
 	padding-inline: 1rem;
 	border: 1px solid var(--color-foreground);
@@ -203,5 +125,44 @@ const { pageTitle } = Astro.props;
 
 	& ~ details, &:has( ~ details ) {
 		border-radius: 0;
+	}
   }
+  
+	main {
+	  padding-top: calc(2.5rem + 5%);
+	  padding-inline:  min(1.6rem, 2.5vw);
+	  padding-bottom: 10%;
+	  max-width: var(--site-width);
+	  margin-inline: auto;
+	  display: flex;
+	  justify-content: center;
+	  gap: 2rem;
+  
+	  > .left {
+		max-width: var(--col-min-width);
+	  }
+  
+	  > .right {
+		z-index: 5;
+		width: clamp(var(--col-min-width), calc(80rch + 25px), 80vw);
+	  }
+  
+	  @media screen and (max-width: 900px) {
+		flex-direction: column;
+		
+		> .left {
+		  margin-inline: auto;
+		  .left-content {
+			position: initial;
+			padding-top: 2rem;
+		  }
+		}
+  
+		> .right {
+		  padding-top: 0;
+		  margin-left: unset;
+		  margin-inline: auto;
+		}
+	  }
+	}
 </style>
