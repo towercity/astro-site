@@ -1,24 +1,23 @@
 ---
-import { Image } from "astro:assets";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import Island from "../components/Island.astro";
-
-import sideImage from "../img/side.png";
-
-import { randomItemFrom } from "../scripts/rng";
-import { taglines } from "../data/taglines";
 
 const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout>
-  <Header pageTitle={pageTitle} />
-  	<main class="content">
-  	<slot name="info-column" />
-  	<slot />
-  </main>
+	<Header pageTitle={pageTitle} />
+		<main class="content">
+		<div class="left">
+			<div class="left-content">
+				<slot name="info-column" />
+			</div>
+		</div>
+		
+		<div class="right">
+			<slot />
+		</div>
+	</main>
 </BaseLayout>
 
 <style is:global>

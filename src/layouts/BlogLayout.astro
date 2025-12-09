@@ -14,27 +14,26 @@ const { pageTitle } = Astro.props;
 ---
 
 <GridsLayout {...Astro.props} >
-    <div class="left">
-      <div class="left-content">
-        <Island noPadding>
-          <a href="/" style="line-height:0;">
-            <Image
-              src={sideImage}
-              width="450"
-              alt="A beautiful building in simulated night."
-              class="header-img"
-            />
-          </a>
-        </Island>
-        <Island> {randomItemFrom(taglines)}</Island>
-      </div>
-    </div>
-    <div class="right">
+  <Fragment slot="info-column">
+    <Island noPadding>
+      <a href="/" style="line-height:0;">
+         <Image
+           src={sideImage}
+           width="450"
+           alt="A beautiful building in simulated night."
+           class="header-img"
+         />
+       </a>
+     </Island>
+     <Island> {randomItemFrom(taglines)}</Island>
+  </Fragment>  
+  
+  <Fragment slot="default">
       <h1>{pageTitle}</h1>
       <article class="page">
         <slot />
       </article>
-    </div>
+  </Fragment>
 </GridsLayout>
 
 
