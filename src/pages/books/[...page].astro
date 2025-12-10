@@ -23,7 +23,7 @@ const { page } = Astro.props;
 ---
 
 <BlogLayout pageTitle={pageTitle}>
-    <Pagination page={page} />
+  <Pagination page={page} slot="info-column"/>
   <BookList
     collection={page.data}
     title="here are some books i have read but not necessarily finished"

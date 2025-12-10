@@ -149,13 +149,12 @@ const { pageTitle } = Astro.props;
   
 	  @media screen and (max-width: 900px) {
 		flex-direction: column;
+		gap: 0;
 		
 		> .left {
+		  width: clamp(var(--col-min-width), calc(80rch + 25px), 80vw);
+		  max-width: unset;
 		  margin-inline: auto;
-		  .left-content {
-			position: initial;
-			padding-top: 2rem;
-		  }
 		}
   
 		> .right {

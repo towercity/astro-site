@@ -26,8 +26,6 @@ export async function getStaticPaths({ paginate }) {
 			pageSize: 100 
 		});
 	})
-
-
 }
 
 const {page} = Astro.props;
@@ -48,7 +46,7 @@ const getStatString = status => {
 ---
 
 <BlogLayout pageTitle={pageTitle}>
-    <Pagination page={page} />
+    <Pagination slot="info-column" page={page} />
 	<BookList 
 		collection={page.data}
 		title=`here are some books ${getStatString(status)}`
