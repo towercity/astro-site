@@ -42,4 +42,8 @@ const getStatString = status => {
 }
 ---
 
-<BookListPage page={page} pageTitle={pageTitle} title={getStatString(status)}>
+<BookListPage 
+	page={page} 
+	pageTitle={pageTitle} 
+	title={`here are some books ${getStatString(status)}`}
+/>

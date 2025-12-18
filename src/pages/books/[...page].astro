@@ -1,12 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-import BlogLayout from "../../layouts/BlogLayout.astro";
-import BookList from "../../components/BookList.astro"
-import Pagination from "../../components/Pagination.astro";
-
-
-
+import BookListPage from "../../templates/BookListPage.astro";
 
 export async function getStaticPaths({ paginate }) {
     const collection = await getCollection("books");
@@ -22,12 +17,8 @@ const pageTitle = "books";
 const { page } = Astro.props;
 ---
 
-<BlogLayout pageTitle={pageTitle}>
-  <Pagination page={page} slot="info-column"/>
-  <BookList
-    collection={page.data}
-    title="here are some books i have read but not necessarily finished"
-  />
-    <Pagination page={page} />
-</BlogLayout>
-
+<BookListPage
+  page={page} 
+  pageTitle={pageTitle} 
+  title="here are some books i have read but not necessarily finished"
+/>
