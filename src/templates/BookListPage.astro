@@ -1,0 +1,45 @@
+---
+import BlogLayout from "../layouts/BlogLayout.astro";
+import BookList from "../components/BookList.astro"
+import Pagination from "../components/Pagination.astro";
+import Island from "../components/Island.astro";
+
+const {page, pageTitle, title} = Astro.props;
+
+const bookLinks = [
+	['all', '/books'],
+	'reading',
+	'read',
+	'unfinished'
+]
+---
+
+<BlogLayout pageTitle={pageTitle}>
+	<Island slot="info-column" bottomMargin >
+		{
+			bookLinks.map(link => (
+				('string' === typeof link &&
+				<p class="tag">
+					<a href={link}>{link}</a>
+				</p>) ||
+				('object' === typeof link &&
+				<p class="tag">
+					<a href={link[1]}>{link[0]}</a>
+				</p>) 
+			)
+			)
+		}
+	</Island>
+	<Pagination slot="info-column" page={page} />
+	<BookList 
+		collection={page.data}
+		title={title}
+	  />
+	<Pagination page={page} />
+</BlogLayout>
+
+<style>
+.tag {
+	margin-inline: 0.5ch;
+}
+</style>
