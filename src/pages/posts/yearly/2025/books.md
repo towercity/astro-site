@@ -5,7 +5,7 @@ tags:
   - books
   - year reviews
   - "2025"
-pubDate: 2026-01-01
+pubDate: 2025-12-31
 ---
 
 two excuses before we start:
