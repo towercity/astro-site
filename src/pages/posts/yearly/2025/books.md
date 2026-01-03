@@ -1,6 +1,6 @@
 ---
 layout: ../../../../layouts/MarkdownPostLayout.astro
-title: Books from 2024!
+title: Books from 2025!
 tags:
   - books
   - year reviews
