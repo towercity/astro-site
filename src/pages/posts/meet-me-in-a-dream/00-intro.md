@@ -45,7 +45,7 @@ a few notes on my translations of Meet Me In a Dream:
 - ク
 	- Quiz Show
 	- Cool Mint Gum
-	- Crab
+	- [Club](/posts/meet-me-in-a-dream/25-club)
 	- Grape Drops
 - コ
 	- Coin
