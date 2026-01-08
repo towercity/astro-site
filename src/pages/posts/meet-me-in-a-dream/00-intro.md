@@ -70,7 +70,7 @@ a few notes on my translations of Meet Me In a Dream:
 - ス
 	- Squeeze
 	- Superman
-	- Star Wars
+	- [Star Wars](/posts/meet-me-in-a-dream/47-star-wars)
 	- Stereotype
 	- Straight
 	- Special Issue
