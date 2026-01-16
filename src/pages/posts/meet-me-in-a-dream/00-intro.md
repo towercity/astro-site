@@ -13,132 +13,100 @@ a few notes on my translations of Meet Me In a Dream:
 
 ## stories
 (with links to translation, if available)
-- ア
-	- [Eisenhower](/posts/meet-me-in-a-dream/01-eisenhower)
-	- [Assistant](/posts/meet-me-in-a-dream/02-assistant)
-	- [Asparagus](/posts/meet-me-in-a-dream/03-asparagus)
-	- Apartment
-	- Work
-	- Allergies
-	- Encore
-	- Antithesis
-- イ
-	- Interview
-	- Indian
-	- Interior
-- ウ
-	- West Coast
-- エ
-	- Etiquette
-	- Elite
-	- Elevator
-- オ
-	- Sardines in Oil
-	- [All Night](/posts/meet-me-in-a-dream/17-all-night)
-	- Onion Soup
-- カ
-	- Carpet
-	- Kama Sutra
-	- Cutlet
-- キ
-	- Camp Fire
-- ク
-	- Quiz Show
-	- Cool Mint Gum
-	- [Club](/posts/meet-me-in-a-dream/25-club)
-	- Grape Drops
-- コ
-	- Coin
-	- Coffee
-	- Coffee Cup
-	- Coca Cola
-	- Condor
-- サ
-	- Surfer
-	- Sudden Death
-	- Salary Man
-- シ
-	- Season
-	- Off-Season
-	- Shaving Cream
-	- Shigesato Itoi
-	- City Boy
-	- Shower
-	- Jungle Book
-	- Short Stop
-	- Jinx
-- ス
-	- Squeeze
-	- Superman
-	- [Star Wars](/posts/meet-me-in-a-dream/47-star-wars)
-	- Stereotype
-	- Straight
-	- Special Issue
-- セ
-	- Sweater
-	- Xerox
-- ソ
-	- Soft Serve
-	- Softball
-- タ
-	- Direct Mail
-	- Taxi
-	- Talcum Powder
-- チ
-	- Charlie Manuel
-	- Chewing Gum I
-	- Chewing Gum II
-- テ
-	- Disney Land
-	- Debt
-	- Death Match
-	- Tent
-- ト
-	- Donuts I
-	- Donuts II
-	- Dog Food
-- 二
-	- Nickname
-- ノ
-	- Knock
-- ハ
-	- Highway
-	- High Heel
-	- Haruki Murakami
-	- Bread
-	- Handsome
-- ヒ
-	- Beer
-- フ
-	- Philip Marlowe
-	- Blue Suede Shoes
-	- Blueberry Ice Cream
-	- Playboy Party Joke
-- へ
-	- Baseball
-	- Penguin
-- ホ
-	- Whale
-	- Hotel
-	- Pony Tail
-- マ
-	- Margarine
-	- Masquerade
-	- Match
-	- May
-- ミ
-	- Disco Ball
-- モ
-	- Mozart
-	- Moral
-- ラ
-	- Rack
-	- Love Letter
-	- Last Scene
-	- Lunch
-	- Runway
-- レ
-	- Raincoat
-- ワ
-	- Wham!
-	- Bow Wow
+1. [Eisenhower](/posts/meet-me-in-a-dream/01-eisenhower)
+1. [Assistant](/posts/meet-me-in-a-dream/02-assistant)
+1. [Asparagus](/posts/meet-me-in-a-dream/03-asparagus)
+1. Apartment
+1. Work
+1. Allergies
+1. Encore
+1. Antithesis
+1. Interview
+1. Indian
+1. Interior
+1. West Coast
+1. Etiquette
+1. Elite
+1. Elevator
+1. Sardines in Oil
+1. [All Night](/posts/meet-me-in-a-dream/17-all-night)
+1. Onion Soup
+1. Carpet
+1. Kama Sutra
+1. Cutlet
+1. Camp Fire
+1. Quiz Show
+1. Cool Mint Gum
+1. [Club](/posts/meet-me-in-a-dream/25-club)
+1. [Grape Drops](/posts/meet-me-in-a-dream/26-grape-drops)
+1. Coin
+1. Coffee
+1. Coffee Cup
+1. Coca Cola
+1. Condor
+1. Surfer
+1. Sudden Death
+1. Salary Man
+1. Season
+1. Off-Season
+1. Shaving Cream
+1. Shigesato Itoi
+1. City Boy
+1. Shower
+1. Jungle Book
+1. Short Stop
+1. Jinx
+1. Squeeze
+1. Superman
+1. [Star Wars](/posts/meet-me-in-a-dream/47-star-wars)
+1. Straight
+1. Special Issue
+1. Sweater
+1. Xerox
+1. Soft Serve
+1. Softball
+1. Direct Mail
+1. Taxi
+1. Talcum Powder
+1. Charlie Manuel
+1. Chewing Gum I
+1. Chewing Gum II
+1. Disney Land
+1. Debt
+1. Death Match
+1. Tent
+1. Donuts I
+1. Donuts II
+1. Dog Food
+1. Nickname
+1. Knock
+1. Highway
+1. High Heel
+1. Haruki Murakami
+1. Bread
+1. Handsome
+1. Beer
+1. Philip Marlowe
+1. Blue Suede Shoes
+1. Blueberry Ice Cream
+1. Playboy Party Joke
+1. Baseball
+1. Penguin
+1. Whale
+1. Hotel
+1. Pony Tail
+1. Margarine
+1. Masquerade
+1. Match
+1. May
+1. Disco Ball
+1. Mozart
+1. Moral
+1. Rack
+1. Love Letter
+1. Last Scene
+1. Lunch
+1. Runway
+1. Raincoat
+1. Wham!
+1. Bow Wow
