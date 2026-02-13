@@ -42,7 +42,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Coin
 1. Coffee
 1. Coffee Cup
-1. Coca Cola
+1. [Coca Cola](/posts/meet-me-in-a-dream/30-coca-cola)
 1. Condor
 1. Surfer
 1. Sudden Death
