@@ -16,9 +16,9 @@ tags: [ "shigesato itoi", "meet me in a dream", "translation" ]
 
 * An assistant mustn't eat any pastry their employer's set aside for later.
 * An assistant mustn't turn away clients because their employer finds them beautiful.
-* An assistant mustn't toss their employer's stale tea away on their own discression.
+* An assistant mustn't toss their employer's stale tea away on their own discretion.
 * An assistant mustn't use word such as "like" or "um" when speaking to their employer.
 * An assistant musn't wish for a nicer chair or salary than their employer.
 * An assistant mustn't add the term 'manager' to their business card.
 
-Given all this, from now till the end of time, I do not intend to become an assistant.
+Given all this, from now till the end of time, I do not plan to be an assistant.
