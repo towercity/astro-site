@@ -39,6 +39,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Cool Mint Gum
 1. [Club](25-club)
 1. [Grape Drops](26-grape-drops)
+1. K
 1. Coin
 1. Coffee
 1. Coffee Cup
@@ -59,6 +60,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Squeeze
 1. Superman
 1. [Star Wars](47-star-wars)
+1. Stereotype
 1. Straight
 1. Special Issue
 1. Sweater
