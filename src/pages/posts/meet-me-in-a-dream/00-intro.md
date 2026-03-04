@@ -87,7 +87,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Haruki Murakami
 1. Bread
 1. Handsome
-1. Beer
+1. [Beer](75-beer)
 1. Philip Marlowe
 1. Blue Suede Shoes
 1. Blueberry Ice Cream
