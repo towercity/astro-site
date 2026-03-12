@@ -90,7 +90,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. [Beer](75-beer)
 1. Philip Marlowe
 1. Blue Suede Shoes
-1. Blueberry Ice Cream
+1. [Blueberry Ice Cream](78-blueberry-ice-cream)
 1. Playboy Party Joke
 1. Baseball
 1. Penguin
