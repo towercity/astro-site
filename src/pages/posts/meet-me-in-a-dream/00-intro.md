@@ -13,9 +13,9 @@ a few notes on my translations of Meet Me In a Dream:
 
 ## stories
 (with links to translation, if available)
-1. [Eisenhower](01-eisenhower)
-1. [Assistant](02-assistant)
-1. [Asparagus](03-asparagus)
+1. [Eisenhower](./01-eisenhower)
+1. [Assistant](./02-assistant)
+1. [Asparagus](./03-asparagus)
 1. Apartment
 1. Work
 1. Allergies
@@ -29,7 +29,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Elite
 1. Elevator
 1. Sardines in Oil
-1. [All Night](17-all-night)
+1. [All Night](./17-all-night)
 1. Onion Soup
 1. Carpet
 1. Kama Sutra
@@ -37,13 +37,13 @@ a few notes on my translations of Meet Me In a Dream:
 1. Camp Fire
 1. Quiz Show
 1. Cool Mint Gum
-1. [Club](25-club)
-1. [Grape Drops](26-grape-drops)
-1. [K](27-k)
+1. [Club](./25-club)
+1. [Grape Drops](./26-grape-drops)
+1. [K](./27-k)
 1. Coin
 1. Coffee
 1. Coffee Cup
-1. [Coca Cola](30-coca-cola)
+1. [Coca Cola](./30-coca-cola)
 1. Condor
 1. Surfer
 1. Sudden Death
@@ -55,11 +55,11 @@ a few notes on my translations of Meet Me In a Dream:
 1. City Boy
 1. Shower
 1. Jungle Book
-1. [Shortstop](42-short-stop)
+1. [Shortstop](./42-short-stop)
 1. Jinx
 1. Squeeze
 1. Superman
-1. [Star Wars](47-star-wars)
+1. [Star Wars](./47-star-wars)
 1. Stereotype
 1. Straight
 1. Special Issue
@@ -87,10 +87,10 @@ a few notes on my translations of Meet Me In a Dream:
 1. Haruki Murakami
 1. Bread
 1. Handsome
-1. [Beer](75-beer)
+1. [Beer](./75-beer)
 1. Philip Marlowe
 1. Blue Suede Shoes
-1. [Blueberry Ice Cream](78-blueberry-ice-cream)
+1. [Blueberry Ice Cream](./78-blueberry-ice-cream)
 1. Playboy Party Joke
 1. Baseball
 1. Penguin
