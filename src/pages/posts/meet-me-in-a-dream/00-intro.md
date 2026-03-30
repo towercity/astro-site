@@ -39,7 +39,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Cool Mint Gum
 1. [Club](25-club)
 1. [Grape Drops](26-grape-drops)
-1. K
+1. [K](27-k)
 1. Coin
 1. Coffee
 1. Coffee Cup
