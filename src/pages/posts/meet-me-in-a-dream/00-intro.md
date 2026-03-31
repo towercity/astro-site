@@ -1,6 +1,6 @@
 ---
 pubDate: 2025-01-04
-layout: .../.../.../layouts/MarkdownPostLayout.astro
+layout: ../../../layouts/MarkdownPostLayout.astro
 title: "Meet Me in a Dream translatoion"
 tags: [ "haruki murakami", "shigesato itoi", "meet me in a dream", "translation" ]
 ---
