@@ -51,7 +51,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Season
 1. Off-Season
 1. Shaving Cream
-1. Shigesato Itoi
+1. [Shigesato Itoi](../39-shigesato-itoi)
 1. City Boy
 1. Shower
 1. Jungle Book
