@@ -28,5 +28,5 @@ As in a street fair for example (strange comparison, I know), once a "novelist's
 </small>
 
 
-[^1]: a [Japanese counterculture magazine](https://ja.wikipedia.org/wiki/%E5%AE%9D%E5%B3%B6_(%E9%9B%91%E8%AA%8C)), to my understanding (which is not great). something like Rolling Stone or Playboy. (Jun Togawa)[https://en.wikipedia.org/wiki/Jun_Togawa] had some involvement with it though, which makes it cool to me
+[^1]: a [Japanese counterculture magazine](https://ja.wikipedia.org/wiki/%E5%AE%9D%E5%B3%B6_(%E9%9B%91%E8%AA%8C)), to my understanding (which is not great). something like Rolling Stone or Playboy. [Jun Togawa](https://en.wikipedia.org/wiki/Jun_Togawa) had some involvement with it though, which makes it cool to me
 [^2]: allow me this translator's hubris: if i were doing more of a "localization" i'd compare this to more of a farmer's market, and i'd say how a stand there leaves behind stems and trash
