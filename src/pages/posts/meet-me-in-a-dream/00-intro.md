@@ -64,7 +64,7 @@ a few notes on my translations of Meet Me In a Dream:
 1. Straight
 1. Special Issue
 1. Sweater
-1. Xerox
+1. [Xerox](../52-xerox)
 1. Soft Serve
 1. Softball
 1. Direct Mail
