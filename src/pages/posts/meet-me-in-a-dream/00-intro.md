@@ -55,8 +55,8 @@ a few notes on my translations of Meet Me In a Dream:
 1. City Boy
 1. Shower
 1. Jungle Book
-1. [Shortstop](../42-short-stop)
-1. Jinx
+1. [Shortstop](../43-short-stop)
+1. [Jinx](../44-jinxes)
 1. Squeeze
 1. Superman
 1. [Star Wars](../47-star-wars)
