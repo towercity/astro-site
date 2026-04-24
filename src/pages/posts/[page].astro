@@ -17,10 +17,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 
 console.log(page.data[0])
-// console.log(page.data[0].rendered.html)
 const {Content, headings} = await render(page.data[0])
-// console.log(Content, headings)
-
 
 const pageTitle = "blog";
 ---
