@@ -1,11 +1,14 @@
 ---
 import ContentBlock from "./ContentBlock.astro";
+import { render } from 'astro:content';  
 
 const { post } = Astro.props;
 
+console.log(post)
+
 const url = `/posts/${post.id}`;
 const title = post.data.title;
-const html = post.rendered.html;
+const { Content } = await render(post);
 const date = new Date(post.data.pubDate).toLocaleDateString("en-us", {
     year: "numeric",
     month: "short",
@@ -15,7 +18,7 @@ const date = new Date(post.data.pubDate).toLocaleDateString("en-us", {
 
 <ContentBlock title={date} link={url}>
     <h2><a href={url}>{title}</a></h2>
-    <Fragment set:html={html} />
+    <Content />
     <slot />
 </ContentBlock>
 
