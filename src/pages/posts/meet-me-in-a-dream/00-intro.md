@@ -10,6 +10,7 @@ a few notes on my translations of Meet Me In a Dream:
 - i know of the other partial translation online, but i’m not consulting it, for same reasons as above
 - respecting authorial intentions, as expressed in the books foreword, i will not be marking who wrote what on this page. that’s only there with the stories themselves
 - let me know what you think, imagined reader. contact link’s there in the menu
+- scroll to end of page for links to other translations online :)
 
 ## stories
 (with links to translation, if available)
@@ -112,3 +113,7 @@ a few notes on my translations of Meet Me In a Dream:
 97. Raincoat
 98. Wham!
 99. Bow Wow
+
+## Other translations
+- https://yomuka.wordpress.com/2010/01/20/lets-meet-in-a-dream/
+- https://mother4ever.net/lets-meet-in-a-dream/
