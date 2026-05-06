@@ -14,101 +14,101 @@ a few notes on my translations of Meet Me In a Dream:
 ## stories
 (with links to translation, if available)
 1. [Eisenhower](../01-eisenhower)
-1. [Assistant](../02-assistant)
-1. [Asparagus](../03-asparagus)
-1. Apartment
-1. Work
-1. Allergies
-1. Encore
-1. Antithesis
-1. Interview
-1. Indian
-1. Interior
-1. West Coast
-1. Etiquette
-1. Elite
-1. Elevator
-1. Sardines in Oil
-1. [All Night](../17-all-night)
-1. Onion Soup
-1. Carpet
-1. Kama Sutra
-1. Cutlet
-1. Camp Fire
-1. Quiz Show
-1. Cool Mint Gum
-1. [Club](../25-club)
-1. [Grape Drops](../26-grape-drops)
-1. [K](../27-k)
-1. Coin
-1. Coffee
-1. Coffee Cup
-1. [Coca Cola](../30-coca-cola)
-1. Condor
-1. Surfer
-1. Sudden Death
-1. Salary Man
-1. Season
-1. Off-Season
-1. Shaving Cream
-1. [Shigesato Itoi](../39-shigesato-itoi)
-1. City Boy
-1. Shower
-1. Jungle Book
-1. [Shortstop](../43-short-stop)
-1. [Jinx](../44-jinxes)
-1. Squeeze
-1. Superman
-1. [Star Wars](../47-star-wars)
-1. Stereotype
-1. Straight
-1. Special Issue
-1. Sweater
-1. [Xerox](../52-xerox)
-1. [Soft Serve](../53-soft-serve)
-1. Softball
-1. Direct Mail
-1. Taxi
-1. Talcum Powder
-1. Charlie Manuel
-1. Chewing Gum I
-1. Chewing Gum II
-1. Disney Land
-1. Debt
-1. Death Match
-1. Tent
-1. Donuts I
-1. Donuts II
-1. Dog Food
-1. Nickname
-1. Knock
-1. Highway
-1. High Heel
-1. Haruki Murakami
-1. Bread
-1. Handsome
-1. [Beer](../75-beer)
-1. Philip Marlowe
-1. Blue Suede Shoes
-1. [Blueberry Ice Cream](../78-blueberry-ice-cream)
-1. Playboy Party Joke
-1. Baseball
-1. Penguin
-1. Whale
-1. Hotel
-1. Pony Tail
-1. Margarine
-1. Masquerade
-1. Match
-1. May
-1. Disco Ball
-1. Mozart
-1. Moral
-1. Rack
-1. Love Letter
-1. Last Scene
-1. Lunch
-1. Runway
-1. Raincoat
-1. Wham!
-1. Bow Wow
+2. [Assistant](../02-assistant)
+3. [Asparagus](../03-asparagus)
+4. Apartment
+5. Work
+6. Allergies
+7. Encore
+8. Antithesis
+9. Interview
+10. Indian
+11. Interior
+12. West Coast
+13. Etiquette
+14. Elite
+15. Elevator
+16. Sardines in Oil
+17. [All Night](../17-all-night)
+18. Onion Soup
+19. Carpet
+20. Kama Sutra
+21. Cutlet
+22. Camp Fire
+23. Quiz Show
+24. Cool Mint Gum
+25. [Club](../25-club)
+26. [Grape Drops](../26-grape-drops)
+27. [K](../27-k)
+28. Coin
+29. Coffee
+30. Coffee Cup
+31. [Coca Cola](../30-coca-cola)
+32. Condor
+33. Surfer
+34. Sudden Death
+35. Salary Man
+36. Season
+37. Off-Season
+38. Shaving Cream
+39. [Shigesato Itoi](../39-shigesato-itoi)
+40. City Boy
+41. Shower
+42. Jungle Book
+43. [Shortstop](../43-short-stop)
+44. [Jinx](../44-jinxes)
+45. Squeeze
+46. Superman
+47. [Star Wars](../47-star-wars)
+48. Stereotype
+49. Straight
+50. Special Issue
+51. Sweater
+52. [Xerox](../52-xerox)
+53. [Soft Serve](../53-soft-serve)
+54. Softball
+55. Direct Mail
+56. [Taxi](../56-taxi)
+57. Talcum Powder
+58. Charlie Manuel
+59. Chewing Gum I
+60. Chewing Gum II
+61. Disney Land
+62. Debt
+63. Death Match
+64. Tent
+65. Donuts I
+66. Donuts II
+67. Dog Food
+68. Nickname
+69. Knock
+70. Highway
+71. High Heel
+72. Haruki Murakami
+73. Bread
+74. Handsome
+75. [Beer](../75-beer)
+76. Philip Marlowe
+77. Blue Suede Shoes
+78. [Blueberry Ice Cream](../78-blueberry-ice-cream)
+79. Playboy Party Joke
+80. Baseball
+81. Penguin
+82. Whale
+83. Hotel
+84. Pony Tail
+85. Margarine
+86. Masquerade
+87. Match
+88. May
+89. Disco Ball
+90. Mozart
+91. Moral
+92. Rack
+93. Love Letter
+94. Last Scene
+95. Lunch
+96. Runway
+97. Raincoat
+98. Wham!
+99. Bow Wow
