@@ -41,7 +41,7 @@ a few notes on my translations of Meet Me In a Dream:
 25. [Club](../25-club)
 26. [Grape Drops](../26-grape-drops)
 27. [K](../27-k)
-28. Coin
+28. [Coin](../28-coin)
 29. Coffee
 30. Coffee Cup
 31. [Coca Cola](../30-coca-cola)
