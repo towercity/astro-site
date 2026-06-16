@@ -45,9 +45,9 @@ a few notes on my translations of Meet Me In a Dream:
 29. Coffee
 30. Coffee Cup
 31. [Coca Cola](../30-coca-cola)
-32. [ Condor](../32-condor)
+32. [Condor](../32-condor)
 33. Surfer
-34. Sudden Death
+34. [Sudden Death](../34-sudden-death)
 35. Salary Man
 36. Season
 37. Off-Season
