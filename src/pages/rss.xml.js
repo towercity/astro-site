@@ -1,27 +1,23 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import rss from '@astrojs/rss';
+import {getCollection} from 'astro:content';
 
-export async function GET( context ) {
-    const posts = await getCollection( 'blog' );
+export async function GET(context) {
+    const posts = await getCollection('blog');
 
-    return rss( {
+    return rss({
         title: 'j konger | blog',
         description: 'a nice website',
         site: context.site,
-        items: posts.map( ( post ) => {
-            const item = {
-                title: post.data.title,
-                pubDate: post.data.pubDate,
-                link: `/posts/${post.id}`,
-                description: 'post'
-            }
-            // if ( post.rendered.html ) {
-            //     item.content = post.rendered.html
-            // } else {
-            //     item.content = 'this is a special post! to view it please open in a browser'
-            // }
-            return item;
-        } ),
+        items: posts
+            .filter((post) => post.data.draft !== true)
+            .map((post) => {
+                return {
+                    title: post.data.title,
+                    pubDate: post.data.pubDate,
+                    link: `/posts/${post.id}`,
+                    description: post.rendered.html || 'this is a special post! to view it please open in a browser'
+                };
+            }),
         customData: `<language>en-us</language>`,
-    } );
+    });
 }
