@@ -1,37 +1,39 @@
 ---
 import ContentBlock from "../components/ContentBlock.astro";
 import BlogLayout from "./BlogLayout.astro";
-const { frontmatter } = Astro.props;
+const {frontmatter} = Astro.props;
 
 const date = new Date(frontmatter.pubDate).toLocaleDateString("en-us", {
     year: "numeric",
     month: "short",
     day: "numeric",
 });
+console.log(frontmatter)
 ---
-
-
+{!frontmatter.draft &&
 <BlogLayout pageTitle={frontmatter.title}>
     <ContentBlock title=`${date}` fullWidth>
-        <slot />
+        <slot/>
     </ContentBlock>
     <ContentBlock title="tags" slot="info-column">
         <div class="tags">
             {
                 frontmatter.tags.map((tag) => (
-                    <p class="tag">
-                        <a href={`/tags/${tag}`}>{tag}</a>
-                    </p>
+                        <p class="tag">
+                            <a href={`/tags/${tag}`}>{tag}</a>
+                        </p>
                 ))
             }
         </div>
     </ContentBlock>
 </BlogLayout>
+}
 
 <style>
     .tags {
         display: flex;
-        flex-wrap; wrap;
+        flex-wrap;
+        wrap;
     }
 
     .tag {

@@ -4,8 +4,6 @@ import { render } from 'astro:content';
 
 const { post } = Astro.props;
 
-console.log(post)
-
 const url = `/posts/${post.id}`;
 const title = post.data.title;
 const { Content } = await render(post);
