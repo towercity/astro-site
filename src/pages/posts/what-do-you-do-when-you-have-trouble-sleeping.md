@@ -4,7 +4,7 @@ title: what do you do when you have trouble sleeping?
 tags:
   - quick-post
 pubDate: 2026-09-15
-draft: true
+draft: false
 ---
 i’ve rarely had full on, sustained insomnia, but ever since college, maybe once a month, i’ll have a terrible night of sleep. it’s trouble _instantiating_ sleep, for all my insomnia enthusiasts out there, and so i’m often very conscious, aware the whole time
 
