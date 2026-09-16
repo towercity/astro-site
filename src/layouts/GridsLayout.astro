@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
 	<Header pageTitle={pageTitle} />
 	<main class="content">
 		<div class="left">

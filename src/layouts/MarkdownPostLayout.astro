@@ -8,8 +8,8 @@ const date = new Date(frontmatter.pubDate).toLocaleDateString("en-us", {
     month: "short",
     day: "numeric",
 });
-console.log(frontmatter)
 ---
+
 {!frontmatter.draft &&
 <BlogLayout pageTitle={frontmatter.title}>
     <ContentBlock title=`${date}` fullWidth>
