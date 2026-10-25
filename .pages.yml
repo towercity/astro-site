@@ -10,10 +10,7 @@ content:
       fields: [ title, draft, pubDate ]
     fields:
       - { name: pubDate, label: Date, type: date }
-      - { name: modDate, label: Date, type: date }
       - { name: title, label: Title, type: string, required: true }
-      - { name: slug, label: Slug, type: string }
-      - { name: featured, label: Featured, type: boolean }
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: description, label: Description, type: string }
